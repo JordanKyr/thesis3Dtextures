@@ -1,0 +1,7 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <engine:VisualElement name="timerContainter" style="flex-grow: 1;">
+        <engine:Label text="timerAll" name="timerAll" enabled="true" style="background-color: rgba(251, 255, 0, 0.43); -unity-font-style: bold; right: -85%; width: auto; -unity-text-align: upper-left; left: auto; height: auto; flex-wrap: nowrap; top: 15px; align-content: flex-start; align-self: flex-start;" />
+        <engine:Label text="timerTile" name="timerTile" style="background-color: rgba(251, 255, 0, 0.43); -unity-font-style: bold; right: -85%; width: auto; -unity-text-align: upper-left; left: auto; height: auto; flex-wrap: nowrap; top: 15px; align-content: flex-start; align-self: flex-start;" />
+        <engine:Label text="percentTile" name="percentTile" style="background-color: rgba(251, 255, 0, 0.43); -unity-font-style: bold; right: -85%; width: auto; -unity-text-align: upper-left; left: auto; height: auto; flex-wrap: nowrap; top: 15px; align-content: flex-start; align-self: flex-start;" />
+    </engine:VisualElement>
+</engine:UXML>
