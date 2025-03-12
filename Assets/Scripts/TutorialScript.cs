@@ -14,6 +14,9 @@ public class TutorialScript : MonoBehaviour
     public Transform typeAStart, typeBStart, typeCStart, typeDStart, asfaltosStart, player, playerRotation;  //simio anaforas gia metafora tou paikti sta diaforetika tiles
     private int index=0;
 
+    public AudioSource sourceTutorial;
+    public AudioClip[] clipsTutorial;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -59,7 +62,9 @@ public class TutorialScript : MonoBehaviour
                     newPosition.x=typeAStart.position.x;        
                     newPosition.z=typeAStart.position.z;
                     player.position=newPosition;
+                    PlayAudioTutorial(index+4);
                     index++;
+
                 break;
 
                  case 1: 
@@ -67,6 +72,7 @@ public class TutorialScript : MonoBehaviour
                     newPosition.x=typeBStart.position.x;
                     newPosition.z=typeBStart.position.z;
                     player.position=newPosition;
+                    PlayAudioTutorial(index+4);
                     index++;
                 break;
 
@@ -75,6 +81,7 @@ public class TutorialScript : MonoBehaviour
                     newPosition.x=typeCStart.position.x;
                     newPosition.z=typeCStart.position.z;
                     player.position=newPosition;
+                    PlayAudioTutorial(index+4);
                     index++;
                 break;
 
@@ -83,6 +90,7 @@ public class TutorialScript : MonoBehaviour
                     newPosition.x=typeDStart.position.x;
                     newPosition.z=typeDStart.position.z;
                     player.position=newPosition;
+                    PlayAudioTutorial(index+4);
                     index++;
                 break;
 
@@ -91,10 +99,23 @@ public class TutorialScript : MonoBehaviour
                     newPosition.x=asfaltosStart.position.x;
                     newPosition.z=asfaltosStart.position.z;
                     player.position=newPosition;
+                    
                     index=0;
                 break;
             }
   
 
     }
+
+#region AUDIO MANAGER                                                       //manager gia na paizoun ta audio apo lista me clips
+    public void PlayAudioTutorial(int index){                           
+        if(index>=0 && index< clipsTutorial.Length){
+                sourceTutorial.clip=clipsTutorial[index];
+                sourceTutorial.PlayDelayed(1f);         //play with delay
+        
+        }   else Debug.LogWarning("öut of bounds clip");
+
+    }
+#endregion
+
 }
