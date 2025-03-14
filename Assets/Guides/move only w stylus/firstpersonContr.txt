@@ -1,0 +1,5 @@
+  Vector3 targetVelocity = new Vector3(Input.GetAxis("Horizontal")*-1.0f, 0, Input.GetAxis("Vertical")*-1.0f);
+
+ALLAGI ME -1.0f sto inpuut gia na paro to anapodo
+
+grammi 393

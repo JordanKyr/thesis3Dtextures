@@ -1,0 +1,8 @@
+unpack prefab, τις λειτουργιες του actor και του 1stperson controller τις μετεφερα
+ολες στο haptic_actor
+
+
+joint0222 se joint0
+touchactor2 se touch
+
+prospatho na apalago apo to 2o actor poy evala sti skini

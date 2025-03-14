@@ -734,13 +734,18 @@ public class HapticPlugin : MonoBehaviour
         hapticErrorQueue = new Queue();
         
 
-    }
-
+    }                                       //GIA TIN METAKINISI TOY STYLUS SE SOSTI THESI
+     private float speedP  = 1.0f; // taxitita   
+    public float targetY = -0.16f; // Tthesi sxetiki me parent
+    private float localY;
+    private bool isInPosition = true; // Control movement
 
     void Start()
 
 
-    {
+    {    localY=transform.localPosition.y;
+
+
         //debug_max_velocity = 0.0f;
         startSchedulers();
         resetContactPointInfo(DeviceIdentifier);
@@ -756,13 +761,30 @@ public class HapticPlugin : MonoBehaviour
         initial_device_rot.transform.rotation=this.transform.rotation;
         
 
+
+
        
 
     }
 
     private void Update()
     {
-           
+       
+      if (isInPosition)
+        {
+             float targetLocalY = localY + targetY;
+                        //metakisi pros ta kato ston aksona Y
+            float newY = Mathf.MoveTowards(transform.localPosition.y,targetLocalY, speedP * Time.deltaTime);
+            transform.localPosition = new Vector3(transform.localPosition.x, newY, transform.localPosition.z);
+
+                    // stamatei otan ftasei ti thesi
+            if (Mathf.Approximately(transform.localPosition.y, targetLocalY))
+            {
+                Debug.Log(transform.localPosition.y);
+                isInPosition = false; 
+            }
+        }
+    
 
     }
 

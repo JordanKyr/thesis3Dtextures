@@ -58,8 +58,13 @@ class HapticCollider : MonoBehaviour
     [Slider(0, 1)]
     public float hFrictionD = 0.0f;
 
+
+    private SphereCollider sphereCollider;
     void Start()
     {
+
+        sphereCollider=GetComponent<SphereCollider>();
+
         if (HPlugin == null)
         {
 
@@ -83,6 +88,17 @@ class HapticCollider : MonoBehaviour
     }
 
  
+    void Update()
+    {
+     
+     
+     if(Input.GetKey(KeyCode.LeftControl)){                              //oso pataei to control den apenergopoieitai to collider
+            sphereCollider.enabled=false;
+        }
+        else if(Input.GetKeyUp(KeyCode.LeftControl)) {
+            sphereCollider.enabled=true;
+        }
+    }
 
 
     private void OnCollisionEnter(Collision collision)

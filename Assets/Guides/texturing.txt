@@ -1,0 +1,13 @@
+https://www.youtube.com/watch?v=CmrAv8TSAao&t=426s
+
+Shading > Texture> Image Texture > Base Color
+Gia normal / bumps add image texture, add normal map, enosi image me normal kai meta bsdf
+
+Make sure Node Wrangler is turned on (Edit > Preferences > Add-ons. Search for Node Wrangler)
+Select the object.
+Click the Material Properties tab 
+Click + New to add a new material.
+Open the Shader Editor and select the Principled BSDF shader.
+With the Principled BSDF Shader selected, press Ctrl+Shift+T to bring up the import window.
+Ctrl+Click to select all the textures to import for that material (color/albedo, displacement, roughness, and normal).
+Click the “Principled Texture Setup” to complete

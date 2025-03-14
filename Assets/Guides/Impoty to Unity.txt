@@ -1,0 +1,13 @@
+Unity:
+	Create Meshes Folder, drag and drop Obj, disable 4 Import Settings, Animation None,
+		Uncheck Import Animaton
+	
+
+add mesh filter
+add mesh renderer
+rigidbody mass 2, no gravity/center of mass, tensor, yes contraints/kinematic, continuous collision detection
+mesh collider
+haptic material script
+material render complex lit
+
+DIMIURGIA PREFAB AN EINAI PROTI FORA

@@ -1,0 +1,4 @@
+Haptic Plugin 
+
+~~590 Control Members max_extents *4   { -0.210*4, -0.110*4, -0.085*4, 0.210*4, 0.205*4 , 0.130*4};
+		usable_extents *4

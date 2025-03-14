@@ -1,0 +1,26 @@
+collider exclusion gia to collider toy paikti kai toy ball toy stylus
+
+1. Using Physics Layers
+This is the most efficient and recommended way to exclude collisions between specific colliders.
+
+Steps:
+Create Custom Layers:
+
+Go to Edit > Project Settings > Tags and Layers.
+
+Create two new layers, e.g., ColliderA and ColliderB.
+
+Assign Layers to GameObjects:
+
+Assign the ColliderA layer to the first GameObject.
+
+Assign the ColliderB layer to the second GameObject.
+
+Disable Collision Between Layers:
+
+Go to Edit > Project Settings > Physics.
+
+In the Layer Collision Matrix, uncheck the intersection between ColliderA and ColliderB.
+
+Result:
+The two colliders will no longer interact with each other, but they will still interact with other colliders as usual.

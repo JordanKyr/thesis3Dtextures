@@ -1,0 +1,62 @@
+GIA NA MPORO NA METAKINOYME SE OLI TH SKINI XORIS PERIORISMO
+
+~isInTransRange()
+
+
+prosthesa: stin arxi 
+   if (SceneLimit == false)
+        {
+
+            inRange[0] = true;
+            inRange[1] = true;
+            inRange[2] = true;
+            inRange[3] = true;
+            inRange[4] = true;
+            inRange[5] = true;
+        }
+
+
+kai meta evala se else ta ipoloipa poy eixe:
+
+else{
+        if (this.transform.position.x > position_nav.x + max_extents[0] + Min_TNav.x)
+        {
+            inRange[0] = true;
+        }
+
+        if (this.transform.position.x < position_nav.x + max_extents[3] + Max_TNav.x)
+        {
+            inRange[3] = true;
+        }
+
+        if (this.transform.position.y > position_nav.y + max_extents[1] + Min_TNav.y)
+        {
+            inRange[1] = true;
+        }
+
+        if (this.transform.position.y < position_nav.y + max_extents[4] + Max_TNav.y)
+        {
+            inRange[4] = true;
+        }
+
+        if (this.transform.position.z > position_nav.z + max_extents[2] + Min_TNav.z)
+        {
+            inRange[2] = true;
+        }
+
+        if (this.transform.position.z < position_nav.z + max_extents[5] + Max_TNav.z)
+        {
+            inRange[5] = true;
+        }
+}
+
+
+
+
+    private void UpdateWorkspaceTransform()
+
+!!!  ΛΑΘΟΣ ΚΩΔΙΚΑΣ? ΔΙΟΡΘΩΣΗ ΓΙΑ ΝΑ ΚΙΝΕΙΤΑΙ Ο Ζ ΑΞΟΝΑΣ ΔΙΑΦΟΡΕΤΙΚΑ ΑΠΟ ΤΟ Υ
+
+ΣΤΗ ΓΡΑΜΜΗ 1110 ΒΛΕΠΟΥΜΕ ΟΤΙ Ο ΑΞΟΝΑΣ Ζ ΜΕΤΑΚΙΝΕΙΤΑΙ ΜΟΝΟ ΟΤΑΝ Ο ΑΞΟΝΑΣ Υ ΕΙΝΑΙ ΕΝΕΡΓΟΣ
+ΟΠΟΤΕ ΒΓΑΖΩ ΑΠΟ ΤΟ ELSE ΤΙΣ ΛΕΙΤΟΥΡΓΙΕΣ ΤΟΥ ΑΞΟΝΑ Ζ
+

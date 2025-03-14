@@ -1,0 +1,17 @@
+haptic material
+
+comment fixedupdate
+       /* HapticPlugin[] HPs = (HapticPlugin[])Object.FindObjectsOfType(typeof(HapticPlugin));
+        foreach (HapticPlugin HP in HPs)
+        {
+            if (HP.GrabObject == this.gameObject)
+            {
+                HPlugin = HP;
+
+
+            }
+        }
+
+        */       //   commenting because of heavy cpu usage
+
+heavy cpu usage

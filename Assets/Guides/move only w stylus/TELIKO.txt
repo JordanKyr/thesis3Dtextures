@@ -1,0 +1,4 @@
+parent object me to 1st person controller
+haptic:1269
+transform.parent.transform.Translate(stx, sty, stz);  //SOSTO KOYNAEI TON PARENT OPOTE KOUNIETAI KAI TO ACTOR
+

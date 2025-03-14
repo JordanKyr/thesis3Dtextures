@@ -1,0 +1,7 @@
+1stPERsonCOntroller
+
+grammi 156 if(joint!=null) 
+
+grammi 545 pali if
+
+grammi 179  if(crosshair!=null)

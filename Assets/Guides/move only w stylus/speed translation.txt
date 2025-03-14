@@ -1,0 +1,6 @@
+HapticPlugin
+
+
+gia na metakineitai pio grigora
+
+grammi 353 kai 348 Slider(0,15) apo (0,5)

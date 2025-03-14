@@ -1,0 +1,43 @@
+actor holder 0.261
+
+hapticactor Y -0.02919993 ---> -0,.16*** 			Z -0.4750004
+
+
+
+	*** otan ksekinaei na to anevazo pio pano
+
+
+capsule collider   Y 0.4
+
+
+
+camera distance 0.2 
+
+
+ ? NA MIKRINO TO SCALE TOY WORKSPACE, NA MHN PIANO POLI MAKRIA
+
+
+-APENERGOPOIISI TOY CAPSULE COLLIDER sto HAPTICACTOR ggia na mpainei pio xamila sti patoma
+
+
+
+      if (isInPosition)
+        {
+                        //metakisi pros ta kato ston aksona Y
+            float newY = Mathf.MoveTowards(transform.position.y, targetY, speedP * Time.deltaTime);
+            transform.position = new Vector3(transform.position.x, newY, transform.position.z);
+
+                    // stamatei otan ftasei ti thesi
+            if (Mathf.Approximately(transform.position.y, targetY))
+            {
+                Debug.Log(transform.position.y);
+                isInPosition = false; 
+            }
+        }
+    
+
+STO HAPTIC PLUGIN
+
+
+
+NA VALO KOUTI KATO APO TIN PISTA ALLO KOYTI STHN ASFALTO KAI ALLO GIA TIN KLISI

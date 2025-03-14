@@ -1,0 +1,27 @@
+	Blender:
+	Shading Option>Backface Culling
+
+	Shading:
+	-BEFORE UNITING MESHES
+		Shade Smooth the Curvy Meshes with Shade Auto Smooth
+	-Edit Mode > Select all edges> RMB>Mark Sharp
+
+
+	-Apply Modifiers to All Objects
+	-Select all Objects, CTRL+J to join into 1 Mesh
+	-Edit Mode: Select the bottom, SHIFT+S Cursor to Selected, 
+		Object >RMB>SET ORIGIN>ORIGIN TO 3d CURSOR
+	-Move object to center ALT+G, move cursor to center SHIFT+C
+	-Apply Rotation & Scale CTRL+A Rotaion and Scale
+
+
+
+Export: 
+	-Rename object and Object Data and Material
+	-File Export
+		Same name as object, Selection Only, Object Groups
+
+Unity:
+	Create Meshes Folder, drag and drop Obj, disable 4 Import Settings, Animation None,
+		Uncheck Import Animaton
+	
