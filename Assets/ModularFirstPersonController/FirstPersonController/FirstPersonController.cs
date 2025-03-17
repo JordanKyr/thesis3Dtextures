@@ -143,6 +143,12 @@ public class FirstPersonController : MonoBehaviour
             // Calculate how fast we should be moving
             Vector3 targetVelocity = new Vector3(Input.GetAxis("Horizontal")*-1.0f, 0, Input.GetAxis("Vertical")*-1.0f);   
             // All movement calculations while walking
+
+           if (targetVelocity.magnitude > 1)       //otan patas dio koumpia na min trexei pio grigora
+        {
+            targetVelocity.Normalize();
+        }
+     
         
              targetVelocity = transform.TransformDirection(targetVelocity) * walkSpeed;
 

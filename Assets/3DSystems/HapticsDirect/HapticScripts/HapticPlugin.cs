@@ -738,7 +738,7 @@ public class HapticPlugin : MonoBehaviour
      private float speedP  = 1.0f; // taxitita   
     public float targetY = -0.16f; // Tthesi sxetiki me parent
     private float localY;
-    private bool isInPosition = true; // Control movement
+    private bool isInPositionY = true; // Control movement
 
     void Start()
 
@@ -769,22 +769,19 @@ public class HapticPlugin : MonoBehaviour
 
     private void Update()
     {
-       
-      if (isInPosition)
-        {
-             float targetLocalY = localY + targetY;
-                        //metakisi pros ta kato ston aksona Y
-            float newY = Mathf.MoveTowards(transform.localPosition.y,targetLocalY, speedP * Time.deltaTime);
-            transform.localPosition = new Vector3(transform.localPosition.x, newY, transform.localPosition.z);
-
-                    // stamatei otan ftasei ti thesi
-            if (Mathf.Approximately(transform.localPosition.y, targetLocalY))
+            initialPositionY(); //arxikopoiisi ston Y aksona gia metakini pio kato sto patoma
+      
+           UpdateButtonStatus();
+            if (bIsRelease && bIsGrabbingActive)
             {
-                Debug.Log(transform.localPosition.y);
-                isInPosition = false; 
+                ReleaseObj();
+                bIsGrabbing = false;
+
             }
-        }
-    
+            if (!isTouching)
+            {
+                ActiveMaterials.Clear();
+            }
 
     }
 
@@ -842,17 +839,7 @@ public class HapticPlugin : MonoBehaviour
             }
 
 
-            UpdateButtonStatus();
-            if (bIsRelease && bIsGrabbingActive)
-            {
-                ReleaseObj();
-                bIsGrabbing = false;
-
-            }
-            if (!isTouching)
-            {
-                ActiveMaterials.Clear();
-            }
+     
 
             SendContactpoints();
             ContactPointsInfo.Clear();
@@ -860,7 +847,24 @@ public class HapticPlugin : MonoBehaviour
         }
 
     }
+    private void initialPositionY(){
 
+        if (isInPositionY)
+        {
+             float targetLocalY = localY + targetY;
+                        //metakisi pros ta kato ston aksona Y
+            float newY = Mathf.MoveTowards(transform.localPosition.y,targetLocalY, speedP * Time.deltaTime);
+            transform.localPosition = new Vector3(transform.localPosition.x, newY, transform.localPosition.z);
+
+                    // stamatei otan ftasei ti thesis
+            if (Mathf.Approximately(transform.localPosition.y, targetLocalY))
+            {
+                Debug.Log(transform.localPosition.y);
+                isInPositionY = false; 
+            }
+        }
+
+    }
     private void OnDestroy()
     {
         //if (isIncorrectVersion) return;

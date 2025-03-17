@@ -1,0 +1,11 @@
+FPC script
+
+grammi 147-150
+     if (targetVelocity.magnitude > 1)       //otan patas dio koumpia na min trexei pio grigora
+        {
+            targetVelocity.Normalize();
+        }
+
+to script kanei ton paikt na trexei pio grigora otan exei dio koympia px WA. 
+me to normalize i timi tis taxititas ginetai isi me tin taxitita poy tha eixe me ena koympi
+

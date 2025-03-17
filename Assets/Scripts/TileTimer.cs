@@ -63,12 +63,12 @@ public class TileTimer : MonoBehaviour
     }
 
 
-    private void checkTile(){               //elegxos me raycast an yparxei apo kato to sosto tile
+    private void checkTile(){               //elegxos me raycast an yparxei apo kato to sosto tile i stin asfalto
         RaycastHit raycastHit;                                                                              
         if(Physics.Raycast(transform.position,Vector3.down, out  raycastHit, distance, isGround))
         {
               Debug.DrawRay(transform.position, Vector3.down , Color.red, 10f);
-            if(raycastHit.collider.gameObject.name.StartsWith("type"))
+            if(raycastHit.collider.gameObject.name.StartsWith("type") || raycastHit.collider.gameObject.name.StartsWith("ASFALTOS") )
             {
                 isOnTile=true;
                 return;

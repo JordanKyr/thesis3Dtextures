@@ -1,0 +1,14 @@
+3. Increase Fixed Time Step
+Unity’s physics engine updates at a fixed time step. If it's too large, fast objects might skip collision checks. Try:
+
+Go to Edit → Project Settings → Time.
+Reduce Fixed Timestep (default is 0.02), try 0.01 or 0.005.
+This makes physics calculations more frequent, reducing tunneling.
+
+
+FIX GIA NA MIN PERNAEI APO TO PLAKAKI
+
+ALLA!!! 
+
+	ta buttons epeidi itan sto fixedupdate energopoioutan lathos fores. 
+metakinisi sto Haptic Plugin tis leitourgies twn button sto Update apo to FixedUpdate

@@ -1,6 +1,7 @@
 using System.Numerics;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.LowLevelPhysics;
 using UnityEngine.UIElements;
 
 public class TutorialScript : MonoBehaviour
@@ -17,6 +18,8 @@ public class TutorialScript : MonoBehaviour
     public AudioSource sourceTutorial;
     public AudioClip[] clipsTutorial;
 
+    public SphereCollider sphereCollider;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -31,7 +34,10 @@ public class TutorialScript : MonoBehaviour
             if(isWaiting && Time.time - lastTap<=doubleTap){
                 Debug.Log("Double Tap");
                 isWaiting=false;
+               
                 onDoubleSpace();
+             
+
             }
             else {                              //enimerosi protou tap
                 lastTap=Time.time;
@@ -44,14 +50,14 @@ public class TutorialScript : MonoBehaviour
         if(isWaiting && Time.time-lastTap>doubleTap) {              //diaxeirisi single tap
             isWaiting=false;
             Debug.Log("Single Tap");
+            
 
         }
-
 
     }
 
     void onDoubleSpace(){
-
+    
         UnityEngine.Vector3 newPosition=player.position;
         playerRotation.rotation=UnityEngine.Quaternion.Euler(0f, 180f, 0f);   //arxikopoiisi rotation
 
@@ -102,9 +108,7 @@ public class TutorialScript : MonoBehaviour
                     
                     index=0;
                 break;
-            }
-  
-
+            }   
     }
 
 #region AUDIO MANAGER                                                       //manager gia na paizoun ta audio apo lista me clips
