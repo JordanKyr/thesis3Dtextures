@@ -22,6 +22,7 @@ public class StylusSettings : MonoBehaviour
 
         vElement=uiDocument.rootVisualElement;                  //sisxetisi ton stoixeion toy UI me kodika
 
+
         slStiffness=vElement.Q<Slider>("Stiffness");    
         slDynFriction=vElement.Q<Slider>("DynamicFriction");
         slStFriction=vElement.Q<Slider>("StaticFriction");
@@ -114,6 +115,7 @@ public class StylusSettings : MonoBehaviour
     {
         UnityEngine.Cursor.visible=true;
         UnityEngine.Cursor.lockState=CursorLockMode.None;
+         
     }
 
     // Update is called once per frame
@@ -121,4 +123,7 @@ public class StylusSettings : MonoBehaviour
     {
         
     }
+
+
+   
 }

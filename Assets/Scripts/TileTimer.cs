@@ -12,8 +12,10 @@ public class TileTimer : MonoBehaviour
     private float timerTile=0f, timerAll=0f; 
     public UIDocument uiDocument;
     private bool isOnTile=false;
-    private VisualElement vElement;
+    private VisualElement vElement,vElementContainer;
     private Label timerTileLabel, timerAllLabel, percentTileLabel; // Label Grafiko
+    private Translate initalTranslate;
+    private Align initialAlign;
     float timePerc;
 
     private float distance=30f;  //apostasi apo dapedo
@@ -23,12 +25,16 @@ public class TileTimer : MonoBehaviour
     void Start()
     {
          vElement=uiDocument.rootVisualElement;                  //sisxetisi ton stoixeion toy UI me kodika
+         vElementContainer=vElement.Q<VisualElement>("timerContainer");
+
         if(uiDocument!=null) {
             timerTileLabel=vElement.Q<Label>("timerTile");
             timerAllLabel=vElement.Q<Label>("timerAll");
             percentTileLabel=vElement.Q<Label>("percentTile");
 
         }
+
+      //  initialUITimer();
     }
 
     // Update is called once per frame
@@ -59,7 +65,26 @@ public class TileTimer : MonoBehaviour
             percentTileLabel.text=$"Percent on Path: {Mathf.Round(timePerc)}%";  
         }
 
+        if(Input.GetKeyDown(KeyCode.Escape) && Time.timeScale==1) pausedUITimer();
+        else if(Time.timeScale==1) returnUITimer();
     
+    }
+
+private void returnUITimer(){
+            vElementContainer.style.alignSelf=Align.FlexEnd;
+            vElement.style.translate= new Translate(Length.Percent(0), Length.Percent(0));
+            vElementContainer.style.backgroundColor=new Color(0,0,0, 0f);
+           
+
+}
+     private void pausedUITimer(){
+           
+            vElementContainer.style.alignSelf=Align.Center;
+            vElementContainer.style.backgroundColor=new Color(0.4386792f,0.6273584f,1.0f, 0.6f);
+            vElement.style.translate=new Translate(Length.Percent(0), Length.Percent(75));
+
+
+
     }
 
 

@@ -1,0 +1,6 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <engine:VisualElement name="darkMode" enabled="true" style="flex-grow: 1; background-color: rgb(56, 56, 56); align-items: auto; align-content: auto; align-self: auto;">
+        <engine:Label text="Dark Mode On" name="labelDarkMode" enabled="true" style="color: rgb(255, 237, 114); -unity-font-style: bold; font-size: 18px; -unity-text-align: upper-center; align-self: center; align-content: auto; align-items: auto; justify-content: flex-start; white-space: normal; top: 35%;" />
+        <engine:Label text="Press R CTRL to Disable it" name="labelDarkMode" enabled="true" style="color: rgb(255, 237, 114); -unity-font-style: bold; font-size: 14px; -unity-text-align: upper-center; align-self: center; align-content: auto; align-items: auto; justify-content: flex-start; white-space: normal; top: 40%;" />
+    </engine:VisualElement>
+</engine:UXML>

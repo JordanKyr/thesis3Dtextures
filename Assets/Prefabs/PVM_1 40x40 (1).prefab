@@ -198,8 +198,8 @@ MonoBehaviour:
   MaterialID: 0
   bGrabbing: 0
   hMass: 0
-  hStiffness: 0.126
-  hDamping: 0.603
+  hStiffness: 1
+  hDamping: 1
   hImpulseD: 0
   hViscosity: 0
   hFrictionS: 0

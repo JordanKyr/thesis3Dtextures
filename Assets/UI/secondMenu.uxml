@@ -1,0 +1,6 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <engine:VisualElement style="flex-grow: 1; background-color: rgb(255, 249, 143);">
+        <engine:Label text="2nd Scene Menu" name="secondSceneLabel" triple-click-selects-line="true" style="-unity-text-align: upper-center; -unity-font-style: bold; top: 25%; padding-top: 10px; padding-right: 12px; padding-bottom: 14px; padding-left: 12px;" />
+        <engine:Button text="Return to Game" name="returnToGame" style="top: 45%; -unity-font-style: bold; flex-wrap: nowrap; width: auto; height: auto; flex-direction: column; padding-right: 4px; padding-bottom: 10px; padding-left: 4px; flex-basis: auto; align-items: auto;" />
+    </engine:VisualElement>
+</engine:UXML>

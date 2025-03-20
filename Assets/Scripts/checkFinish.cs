@@ -6,6 +6,7 @@ public class checkFinish : MonoBehaviour
 
     private float distance=15f;  //apostasi apo dapedo
 
+    public AudioSource finishAudio;
     private bool isFinish=false;
     [SerializeField]private LayerMask isFinishPlane;
 
@@ -28,9 +29,16 @@ public class checkFinish : MonoBehaviour
             {
                     isFinish=true;
                    Debug.Log($"GAME OVER");    
+                   Time.timeScale=0;
+                    audioFinish();
             } else isFinish=false;
            
         }
 
+
     }
+ public void audioFinish(){
+        if(finishAudio!=null && !finishAudio.isPlaying) finishAudio.Play();
+    }
+
 }

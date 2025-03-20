@@ -7,7 +7,7 @@ public class tutorialMenu : MonoBehaviour
 {
 
     public UIDocument menuDoc;
-    private Button buttonStart,buttonStop, buttonExit;
+    private Button buttonStart,buttonStop;
     private VisualElement visualElement;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -18,11 +18,10 @@ public class tutorialMenu : MonoBehaviour
             visualElement=menuDoc.rootVisualElement;
         buttonStart=visualElement.Q<Button>("startTutorial");     //sisxetisi ton stoixeion toy UI me kodika
         buttonStop=visualElement.Q<Button>("exitTutorial");
-        buttonExit=visualElement.Q<Button>("exitMenuButton");
-
+        
         buttonStart.clicked += resumeGame;
         buttonStop.clicked += exitTutorial;
-        buttonExit.clicked +=exitMenu;
+    
     
     }
 
@@ -39,6 +38,7 @@ public class tutorialMenu : MonoBehaviour
      
      if(Input.GetKeyDown(KeyCode.Escape)){                              //an patithei to escape anoiggei to menu kai stamataei to paixnidi
         menuDoc.rootVisualElement.visible=true; 
+        buttonStart.text="Resume Tutorial";
         pauseGame();
     }
     
@@ -60,7 +60,5 @@ public class tutorialMenu : MonoBehaviour
         resumeGame();
     }
 
-    void exitMenu(){
-        resumeGame();
-    }
+  
 }

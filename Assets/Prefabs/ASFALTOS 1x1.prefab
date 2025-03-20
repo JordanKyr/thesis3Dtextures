@@ -10,15 +10,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: f1d8b77a65388c9468268a1181e382f6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.716295
+      value: 10.199999
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f1d8b77a65388c9468268a1181e382f6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.016
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f1d8b77a65388c9468268a1181e382f6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.7631291
+      value: -6.4800005
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f1d8b77a65388c9468268a1181e382f6, type: 3}
       propertyPath: m_LocalRotation.w
@@ -26,7 +26,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f1d8b77a65388c9468268a1181e382f6, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f1d8b77a65388c9468268a1181e382f6, type: 3}
       propertyPath: m_LocalRotation.y
@@ -198,12 +198,12 @@ MonoBehaviour:
   MaterialID: 0
   bGrabbing: 0
   hMass: 0
-  hStiffness: 0.126
-  hDamping: 0.603
+  hStiffness: 0.07
+  hDamping: 1
   hImpulseD: 0
   hViscosity: 0
-  hFrictionS: 0
-  hFrictionD: 0
+  hFrictionS: 0.075
+  hFrictionD: 0.913
   hConstForceDir: {x: 0, y: 0, z: 0}
   hConstForceMag: 0
   UseContactNormalCF: 0
