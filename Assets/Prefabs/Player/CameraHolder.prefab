@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 2739472121601587389}
   - component: {fileID: 4622202165396338062}
   - component: {fileID: 5044178810670906762}
-  - component: {fileID: 6574104876975208033}
   - component: {fileID: 3902574356099365585}
   m_Layer: 0
   m_Name: PlayerCam
@@ -156,22 +155,6 @@ MonoBehaviour:
   isGround:
     serializedVersion: 2
     m_Bits: 1
---- !u!114 &6574104876975208033
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3333915631026755040}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c71d7e0355800fe41b6152ae1a5a754e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  finishAudio: {fileID: 0}
-  isFinishPlane:
-    serializedVersion: 2
-    m_Bits: 1024
 --- !u!114 &3902574356099365585
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -10,7 +10,7 @@ public class StylusToCamera : MonoBehaviour
   
 {
 
-    public GameObject ActorRot;
+    public GameObject ActorRot;     //VAZO TO TOUCH GIA NA MIN STRIVEI O PAIKTIS ME TI FORA TOU STYLUS
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
       // public float sensY;

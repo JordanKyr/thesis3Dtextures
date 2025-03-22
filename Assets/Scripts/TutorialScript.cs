@@ -15,6 +15,7 @@ public class TutorialScript : MonoBehaviour
     public Transform typeAStart, typeBStart, typeCStart, typeDStart, asfaltosStart, player, playerRotation;  //simio anaforas gia metafora tou paikti sta diaforetika tiles
     private int index=0;
 
+    public FirstPersonController fpc;
     public AudioSource sourceTutorial;
     public AudioClip[] clipsTutorial;
 
@@ -108,7 +109,7 @@ public class TutorialScript : MonoBehaviour
                     
                     index=0;
                 break;
-            }   
+            }   fpc.UpdateTargetPos(player.position); //enimerosi toy ActorHolder gia to neo position (alternative moving system)
     }
 
 #region AUDIO MANAGER                                                       //manager gia na paizoun ta audio apo lista me clips

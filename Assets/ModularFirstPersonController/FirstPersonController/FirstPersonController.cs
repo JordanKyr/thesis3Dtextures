@@ -10,9 +10,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEditor.UIElements;
+
 
 #if UNITY_EDITOR
-    using UnityEditor;
+using UnityEditor;
     using System.Net;
 #endif
 
@@ -46,8 +48,14 @@ public class FirstPersonController : MonoBehaviour
     public bool playerCanMove = true;
     public float walkSpeed = 5f;
     public float maxVelocityChange = 10f;
-
-
+    #endregion
+    #region Alternative Movement Variables
+        public float tileSize=0.4f;
+        public Vector3 targetPos;
+        private bool inMotion;
+        public LayerMask limitLayer;  //Layer gia ta oria
+    public float altWalkSpeed = 7f;
+    #endregion
 
     #region Turn 90
 
@@ -55,8 +63,8 @@ public class FirstPersonController : MonoBehaviour
     public KeyCode turnRight=KeyCode.Q;
 
     public GameObject Player;
-    public AudioSource audioSourceLeft, audioSourceRight;
-    #endregion
+    public AudioSource audioSourceLeft, audioSourceRight, audioSourceLimit;
+
 
     #endregion
    
@@ -74,6 +82,8 @@ public class FirstPersonController : MonoBehaviour
 
     void Start()
     {
+           targetPos=transform.position;
+
         if(lockCursor)
         {
             
@@ -161,9 +171,68 @@ public class FirstPersonController : MonoBehaviour
 
                 rb.AddForce(velocityChange, ForceMode.VelocityChange);
             
+        }else{                                                      //ALTERNATIVE MOVING METHOD
+               
+             if (!inMotion)             //an den einai se kinisi allazei to target position
+        {
+            
+           Vector3 direction = Vector3.zero;  //pairno to direction toy paikti se periptosi poy exei gyrisei me ta koumpia
+            
+            if (Input.GetKeyDown(KeyCode.W))
+            {
+                direction +=  -transform.forward ;
+            }
+            else if (Input.GetKeyDown(KeyCode.S)) 
+            {
+               direction += transform.forward;
+            }
+            else if (Input.GetKeyDown(KeyCode.A)) 
+            {
+               direction += transform.right;
+            }
+            else if (Input.GetKeyDown(KeyCode.D)) 
+            {
+                direction += -transform.right;
+            }
+
+
+            if (direction!=Vector3.zero && isInLimits(targetPos+direction*tileSize))
+            {
+                targetPos +=direction* tileSize;
+                inMotion= true;
+            }
+        }
+
+
+
+        if (inMotion)
+        {
+            
+            transform.position = Vector3.MoveTowards(transform.position, targetPos, altWalkSpeed * Time.deltaTime);
+
+           
+            if (transform.position == targetPos)
+            {
+                inMotion = false;
+            }
+        }
         }
 
         #endregion
+    }
+    private bool isInLimits(Vector3 targetPos){             //elegxos me raycast an iparxei empodio
+
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position, (targetPos-transform.position).normalized, out hit , tileSize, limitLayer)){
+           Debug.Log("limit on the way"); 
+           if(audioSourceLimit!=null && !audioSourceLimit.isPlaying) audioSourceLimit.Play();
+           return false; 
+        }return true;
+    }
+
+    public void UpdateTargetPos(Vector3 newPos){
+        targetPos=newPos;
+
     }
 
     // Sets isGrounded based on a raycast sent straigth down from the player object
@@ -236,7 +305,7 @@ public class FirstPersonController : MonoBehaviour
         GUILayout.Label("Movement Setup", new GUIStyle(GUI.skin.label) { alignment = TextAnchor.MiddleCenter, fontStyle = FontStyle.Bold, fontSize = 13 }, GUILayout.ExpandWidth(true));
         EditorGUILayout.Space();
 
-        fpc.playerCanMove = EditorGUILayout.ToggleLeft(new GUIContent("Enable Player Movement", "Determines if the player is allowed to move."), fpc.playerCanMove);
+        fpc.playerCanMove = EditorGUILayout.ToggleLeft(new GUIContent("Enable Player Movement (FPC movement)", "Determines if the player is allowed to move."), fpc.playerCanMove);
 
         GUI.enabled = fpc.playerCanMove;
         fpc.walkSpeed = EditorGUILayout.Slider(new GUIContent("Walk Speed", "Determines how fast the player will move while walking."), fpc.walkSpeed, .1f, 20.0f);
@@ -255,7 +324,9 @@ public class FirstPersonController : MonoBehaviour
         EditorGUILayout.Space();
         
         fpc.Player = (GameObject)EditorGUILayout.ObjectField(new GUIContent("Player", "Player to Turn."), fpc.Player, typeof(GameObject), true);
-        
+        fpc.limitLayer=EditorGUILayout.MaskField(new GUIContent("Limit Layer", "Collider layer of the walls"), fpc.limitLayer,UnityEditorInternal.InternalEditorUtility.layers);   //input gia layermask
+
+
         GUI.enabled = true;
 
         #endregion
@@ -269,6 +340,8 @@ public class FirstPersonController : MonoBehaviour
         
         fpc.audioSourceLeft = (AudioSource)EditorGUILayout.ObjectField(new GUIContent("Audio Left", "Audiosource Comp Left"), fpc.audioSourceLeft, typeof(AudioSource), true);
          fpc.audioSourceRight = (AudioSource)EditorGUILayout.ObjectField(new GUIContent("Audio Right", "Audiosource Comp Right"), fpc.audioSourceRight, typeof(AudioSource), true);
+        fpc.audioSourceLimit = (AudioSource)EditorGUILayout.ObjectField(new GUIContent("Audio Limit", "Limit"), fpc.audioSourceLimit, typeof(AudioSource), true);
+
         GUI.enabled = true;
 
         #endregion
