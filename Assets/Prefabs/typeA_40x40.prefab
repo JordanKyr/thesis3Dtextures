@@ -53,8 +53,16 @@ PrefabInstance:
       value: typeA_40x40
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 03313061c1a1634408d1afb4b9e3b7e4, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 03313061c1a1634408d1afb4b9e3b7e4, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3603461458844761477, guid: 03313061c1a1634408d1afb4b9e3b7e4, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

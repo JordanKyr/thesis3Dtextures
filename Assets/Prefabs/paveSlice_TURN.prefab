@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 320331896148340221}
   - component: {fileID: 8079000754205792138}
   - component: {fileID: 6167777532256856271}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PVM_1_40x40_PVM_1_40x40
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,7 +95,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8965980298460263060}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: paveSlice_TURN
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 161096632349976699}
   - component: {fileID: 8525376494700188172}
   - component: {fileID: 6041016352654978377}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PVM_1_40x40_PVM_1_40x40
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -224,7 +224,7 @@ GameObject:
   - component: {fileID: 937943799537374388}
   - component: {fileID: 3483011350370706260}
   - component: {fileID: 8218192439455406082}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: KRASPEDO 40x40 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -389,7 +389,7 @@ GameObject:
   - component: {fileID: 8349188507318195707}
   - component: {fileID: 6231445203526258741}
   - component: {fileID: 3721879260714151012}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: KRASPEDO_40x40_KRASPEDO_40x40
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -475,7 +475,7 @@ GameObject:
   - component: {fileID: 3397836552620127138}
   - component: {fileID: 6578604704432392661}
   - component: {fileID: 9137203872088635024}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PVM_1_40x40_PVM_1_40x40
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -561,7 +561,7 @@ GameObject:
   - component: {fileID: 3930430853800995952}
   - component: {fileID: 4821066299992020487}
   - component: {fileID: 7449489094048164162}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PVM_1_40x40_PVM_1_40x40
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -650,7 +650,7 @@ GameObject:
   - component: {fileID: 9179350601081897021}
   - component: {fileID: 6291882066942165580}
   - component: {fileID: 1088045211898278562}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PVM_1 40x40 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -818,7 +818,7 @@ GameObject:
   - component: {fileID: 6376022056555602669}
   - component: {fileID: 5797800693517104932}
   - component: {fileID: 2600793100686432985}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: typeA_40x40 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -986,7 +986,7 @@ GameObject:
   - component: {fileID: 8731848685838403003}
   - component: {fileID: 5845419181576570826}
   - component: {fileID: 673248536294307620}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PVM_1 40x40 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1154,7 +1154,7 @@ GameObject:
   - component: {fileID: 156589969354910118}
   - component: {fileID: 4701389944393242975}
   - component: {fileID: 3393565817511520263}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: KRASPEDO 20x40 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1322,7 +1322,7 @@ GameObject:
   - component: {fileID: 5591822143280923056}
   - component: {fileID: 7325385476063364033}
   - component: {fileID: 4458631229955109679}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PVM_1 40x40 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1487,7 +1487,7 @@ GameObject:
   - component: {fileID: 308798723213533787}
   - component: {fileID: 869817083672447908}
   - component: {fileID: 4907770526182293709}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: typeA-40x40_typeA-40x40
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1573,7 +1573,7 @@ GameObject:
   - component: {fileID: 3601488092537283189}
   - component: {fileID: 6225706010252619894}
   - component: {fileID: 3041101306741608582}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: KRASPEDO_20x40_KRASPEDO_20x40
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1662,7 +1662,7 @@ GameObject:
   - component: {fileID: 6068069170793537122}
   - component: {fileID: 8936486472733269011}
   - component: {fileID: 2615471140086639869}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PVM_1 40x40 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

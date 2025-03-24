@@ -52,6 +52,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: KRASPEDO 20x40 CORNER
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 811a575e312a03e44a68a3033516dfa1, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8489076765796271972, guid: 811a575e312a03e44a68a3033516dfa1, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

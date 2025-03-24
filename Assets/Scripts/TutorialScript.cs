@@ -12,7 +12,7 @@ public class TutorialScript : MonoBehaviour
     private bool isWaiting=false;       //tsek an perimenei patima apo deftero space
 
 
-    public Transform typeAStart, typeBStart, typeCStart, typeDStart, asfaltosStart, player, playerRotation;  //simio anaforas gia metafora tou paikti sta diaforetika tiles
+    public Transform typeAStart, typeBStart, typeCStart, typeDStart, asfaltosStart,pavementStart, player, playerRotation;  //simio anaforas gia metafora tou paikti sta diaforetika tiles
     private int index=0;
 
     public FirstPersonController fpc;
@@ -102,11 +102,22 @@ public class TutorialScript : MonoBehaviour
                 break;
 
                 case 4: 
-                    Debug.Log ("Go to Start");
+                    Debug.Log ("Go to Pavement");
+                    newPosition.x=pavementStart.position.x;
+                    newPosition.z=pavementStart.position.z;
+                    player.position=newPosition;
+                    PlayAudioTutorial(index+4);
+                    index++;
+                break;
+
+
+                
+                case 5: 
+                    Debug.Log ("Go to Street");
                     newPosition.x=asfaltosStart.position.x;
                     newPosition.z=asfaltosStart.position.z;
                     player.position=newPosition;
-                    
+                    PlayAudioTutorial(index+4);
                     index=0;
                 break;
             }   fpc.UpdateTargetPos(player.position); //enimerosi toy ActorHolder gia to neo position (alternative moving system)

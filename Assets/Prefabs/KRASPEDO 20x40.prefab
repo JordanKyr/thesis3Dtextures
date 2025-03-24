@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5249386696840423881}
   - component: {fileID: 849898173944781104}
   - component: {fileID: 7344701379487918184}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: KRASPEDO 20x40
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -179,7 +179,7 @@ GameObject:
   - component: {fileID: 8867251810610946586}
   - component: {fileID: 2059242881901883417}
   - component: {fileID: 6972110273474924777}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: KRASPEDO_20x40_KRASPEDO_20x40
   m_TagString: Untagged
   m_Icon: {fileID: 0}

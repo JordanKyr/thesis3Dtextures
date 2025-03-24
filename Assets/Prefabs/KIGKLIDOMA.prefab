@@ -48,9 +48,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8475762116640889328, guid: 7bafe82b141d365499e017d12bb7bebd, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 7bafe82b141d365499e017d12bb7bebd, type: 3}
       propertyPath: m_Name
       value: KIGKLIDOMA
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7bafe82b141d365499e017d12bb7bebd, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6353287951378126098, guid: 7bafe82b141d365499e017d12bb7bebd, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
