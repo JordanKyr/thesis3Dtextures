@@ -13,8 +13,8 @@
             <ui:Slider label="Dynamic Friction&#x9;&#x9;" value="0" high-value="1" show-input-field="true" name="TileDynamic" />
             <ui:Button text="Apply Tiles" name="ApplyTiles" style="width: 96px; height: 44px;" />
         </ui:Foldout>
-        <ui:Foldout text="Tile Presets" name="foldoutTilePresets" enabled="true" toggle-on-label-click="true" value="false">
-            <ui:RadioButtonGroup tabindex="0" choices="Preset 1,Preset 2,Default" name="radioTilePresets" value="2" />
+        <ui:Foldout text="Tile Presets" name="foldoutTilePresets" enabled="true" toggle-on-label-click="true" value="true">
+            <ui:RadioButtonGroup tabindex="0" choices="Preset 1,Preset 2,Preset 3" name="radioTilePresets" value="2" />
         </ui:Foldout>
         <ui:Foldout text="Collider Presets" name="foldoutColliderPresets" toggle-on-label-click="true" value="false">
             <ui:RadioButtonGroup choices="Small Collider,Medium Collider,Big Collider" name="radioColliderPresets" focusable="true" />

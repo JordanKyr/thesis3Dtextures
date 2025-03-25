@@ -5,16 +5,16 @@ using UnityEngine.AI;
 using UnityEngine.UIElements;
 using Label = UnityEngine.UIElements.Label;
 
-public class TileTimer : MonoBehaviour 
-        //metrisi kai provoli xronou otan o paiktis den einai pano sta sosta tiles
-{
+public class Game2Script : MonoBehaviour
 
+{
     private float timerTile=0f, timerAll=0f; 
     public UIDocument uiDocument;
     private bool isOnTile=false;
     private VisualElement vElement,vElementContainer;
-    private Label timerTileLabel, timerAllLabel, percentTileLabel; // Label Grafiko
+    private Label timerTileLabel, timerAllLabel, percentTileLabel, labelMistakes; // Label Grafiko
     float timePerc;
+    public FirstPersonController firstPersonController;
 
     private float distance=30f;  //apostasi apo dapedo
     [SerializeField]private LayerMask isGround;
@@ -29,7 +29,7 @@ public class TileTimer : MonoBehaviour
             timerTileLabel=vElement.Q<Label>("timerTile");
             timerAllLabel=vElement.Q<Label>("timerAll");
             percentTileLabel=vElement.Q<Label>("percentTile");
-
+            labelMistakes=vElement.Q<Label>("labelMistakes");
         }
 
       //  initialUITimer();
@@ -63,8 +63,15 @@ public class TileTimer : MonoBehaviour
             percentTileLabel.text=$"Percent on Path: {Mathf.Round(timePerc)}%";  
         }
 
+          if(labelMistakes!=null){
+           labelMistakes.text=$"Mistakes: {firstPersonController.getMistakeCount()}";  
+        }
+
+
         if(Input.GetKeyDown(KeyCode.Escape) && Time.timeScale==1) pausedUITimer();
         else if(Time.timeScale==1) returnUITimer();
+
+        
     
     }
 

@@ -128,10 +128,10 @@ public class StylusSettings : MonoBehaviour
                     if(gameObject.name.StartsWith("type")){
                             HapticMaterial hapticMaterial=gameObject.GetComponent<HapticMaterial>();
                         if(hapticMaterial!=null ){
-                                hapticMaterial.hStiffness=0.5f;
-                                hapticMaterial.hDamping=0.5f;
-                                hapticMaterial.hFrictionD=0.2f;
-                                hapticMaterial.hFrictionS=0.1f;
+                                hapticMaterial.hStiffness=1.0f;
+                                hapticMaterial.hDamping=1.0f;
+                                hapticMaterial.hFrictionD=0.25f;
+                                hapticMaterial.hFrictionS=0.25f;
                         } 
 
                     }}
@@ -145,8 +145,8 @@ public class StylusSettings : MonoBehaviour
                         if(hapticMaterial!=null ){
                                 hapticMaterial.hStiffness=1.0f;
                                 hapticMaterial.hDamping=1.0f;
-                                hapticMaterial.hFrictionD=0.6f;
-                                hapticMaterial.hFrictionS=0.3f;
+                                hapticMaterial.hFrictionD=0.5f;
+                                hapticMaterial.hFrictionS=0.5f;
                         } 
 
                     }}
@@ -154,15 +154,15 @@ public class StylusSettings : MonoBehaviour
                 break;
 
                 case 2:
-                    Debug.Log("Preset Default");
+                    Debug.Log("Preset 3");
                     foreach (GameObject gameObject in allTiles){
                     if(gameObject.name.StartsWith("type")){
                             HapticMaterial hapticMaterial=gameObject.GetComponent<HapticMaterial>();
                         if(hapticMaterial!=null ){
                                 hapticMaterial.hStiffness=1.0f;
                                 hapticMaterial.hDamping=1.0f;
-                                hapticMaterial.hFrictionD=0.21f;
-                                hapticMaterial.hFrictionS=0.39f;
+                                hapticMaterial.hFrictionD=0.75f;
+                                hapticMaterial.hFrictionS=0.75f;
                         } 
 
                     }}
@@ -214,7 +214,8 @@ public class StylusSettings : MonoBehaviour
         UnityEngine.Cursor.visible=true;
         UnityEngine.Cursor.lockState=CursorLockMode.None;
 
-        radioTilePresets.value=2;
+        radioColliderPresets.value=1;
+        radioTilePresets.value=-1;
          
     }
 

@@ -55,6 +55,9 @@ public class FirstPersonController : MonoBehaviour
         private bool inMotion;
         public LayerMask limitLayer;  //Layer gia ta oria
     public float altWalkSpeed = 7f;
+    private int mistakeCount=0;
+    
+
     #endregion
 
     #region Turn 90
@@ -64,6 +67,7 @@ public class FirstPersonController : MonoBehaviour
 
     public GameObject Player;
     public AudioSource audioSourceLeft, audioSourceRight, audioSourceLimit;
+
 
 
     #endregion
@@ -221,13 +225,29 @@ public class FirstPersonController : MonoBehaviour
         #endregion
     }
     private bool isInLimits(Vector3 targetPos){             //elegxos me raycast an iparxei empodio
-
-        RaycastHit hit;
-        if (Physics.Raycast(transform.position, (targetPos-transform.position).normalized, out hit , tileSize, limitLayer)){
+    
+        
+        Vector3 direction = (targetPos - transform.position).normalized;
+         RaycastHit hit;
+        
+        Debug.DrawRay(transform.position, direction * tileSize, Color.red, 10f);
+       if (Physics.Raycast(transform.position, (targetPos - transform.position).normalized, out hit, tileSize, limitLayer))
+        {
+            
            Debug.Log("limit on the way"); 
-           if(audioSourceLimit!=null && !audioSourceLimit.isPlaying) audioSourceLimit.Play();
+           
+           if(audioSourceLimit!=null && !audioSourceLimit.isPlaying) {
+            audioSourceLimit.Play();
+           mistakeCount++;
+           }
            return false; 
+          
         }return true;
+    }
+
+    public int getMistakeCount(){
+
+        return mistakeCount;
     }
 
     public void UpdateTargetPos(Vector3 newPos){

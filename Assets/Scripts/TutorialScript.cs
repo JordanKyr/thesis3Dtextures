@@ -12,7 +12,7 @@ public class TutorialScript : MonoBehaviour
     private bool isWaiting=false;       //tsek an perimenei patima apo deftero space
 
 
-    public Transform typeAStart, typeBStart, typeCStart, typeDStart, asfaltosStart,pavementStart, player, playerRotation;  //simio anaforas gia metafora tou paikti sta diaforetika tiles
+    public Transform typeAStart,typeA2Start, typeBStart, typeCStart, typeDStart, asfaltosStart,pavementStart, player, playerRotation;  //simio anaforas gia metafora tou paikti sta diaforetika tiles
     private int index=0;
 
     public FirstPersonController fpc;
@@ -60,8 +60,6 @@ public class TutorialScript : MonoBehaviour
     void onDoubleSpace(){
     
         UnityEngine.Vector3 newPosition=player.position;
-        playerRotation.rotation=UnityEngine.Quaternion.Euler(0f, 180f, 0f);   //arxikopoiisi rotation
-
             switch(index)                   //switch case gia metafora toy paikti se alla block
             {
                 case 0: 
@@ -74,7 +72,17 @@ public class TutorialScript : MonoBehaviour
 
                 break;
 
-                 case 1: 
+                  case 1: 
+                    Debug.Log ("Go to A2");
+                    newPosition.x=typeA2Start.position.x;        
+                    newPosition.z=typeA2Start.position.z;
+                    player.position=newPosition;
+                    PlayAudioTutorial(index+4);
+                    index++;
+
+                break;
+
+                 case 2: 
                     Debug.Log ("Go to B");
                     newPosition.x=typeBStart.position.x;
                     newPosition.z=typeBStart.position.z;
@@ -83,7 +91,7 @@ public class TutorialScript : MonoBehaviour
                     index++;
                 break;
 
-                 case 2: 
+                 case 3: 
                     Debug.Log ("Go to C");
                     newPosition.x=typeCStart.position.x;
                     newPosition.z=typeCStart.position.z;
@@ -92,7 +100,7 @@ public class TutorialScript : MonoBehaviour
                     index++;
                 break;
 
-                 case 3: 
+                 case 4: 
                     Debug.Log ("Go to D");
                     newPosition.x=typeDStart.position.x;
                     newPosition.z=typeDStart.position.z;
@@ -101,7 +109,7 @@ public class TutorialScript : MonoBehaviour
                     index++;
                 break;
 
-                case 4: 
+                case 5: 
                     Debug.Log ("Go to Pavement");
                     newPosition.x=pavementStart.position.x;
                     newPosition.z=pavementStart.position.z;
@@ -112,7 +120,7 @@ public class TutorialScript : MonoBehaviour
 
 
                 
-                case 5: 
+                case 6: 
                     Debug.Log ("Go to Street");
                     newPosition.x=asfaltosStart.position.x;
                     newPosition.z=asfaltosStart.position.z;
@@ -121,6 +129,7 @@ public class TutorialScript : MonoBehaviour
                     index=0;
                 break;
             }   fpc.UpdateTargetPos(player.position); //enimerosi toy ActorHolder gia to neo position (alternative moving system)
+                playerRotation.localRotation= UnityEngine.Quaternion.Euler(0f, 180f, 0f); //enimerosi toy Touch gia na exei sosti fora o paiktis
     }
 
 #region AUDIO MANAGER                                                       //manager gia na paizoun ta audio apo lista me clips
