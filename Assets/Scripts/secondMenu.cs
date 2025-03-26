@@ -6,7 +6,7 @@ public class secondMenu : MonoBehaviour
 {
 
     public UIDocument menuDoc;
-    private Button buttonReturn;
+    private Button buttonReturn,buttonMainMenu;
     private VisualElement visualElement;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -17,7 +17,9 @@ public class secondMenu : MonoBehaviour
          visualElement=menuDoc.rootVisualElement;
          
          buttonReturn=visualElement.Q<Button>("returnToGame");
-        
+        buttonMainMenu=visualElement.Q<Button>("buttonMainMenu");
+
+        buttonMainMenu.clicked+= openMainMenu;  
          
          
          buttonReturn.clicked +=resumeGame;
@@ -34,6 +36,12 @@ public class secondMenu : MonoBehaviour
     void pauseGame(){
 
         Time.timeScale=0; //pagonei to paixnidi
+    }
+
+ void openMainMenu()
+    {
+        SceneManager.LoadScene("Main Menu");
+
     }
 
     void resumeGame(){

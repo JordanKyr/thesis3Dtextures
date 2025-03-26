@@ -1,0 +1,10 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <engine:VisualElement style="flex-grow: 1; background-color: rgb(255, 240, 155);">
+        <engine:Label text="Welcome!" style="-unity-text-align: upper-center; -unity-font-style: bold; font-size: 18px; top: 10%;" />
+        <engine:Label text="Choose a Scene: " enable-rich-text="true" style="top: 70px; -unity-text-align: upper-center; font-size: 16px;" />
+        <engine:Button text="Tutorial" name="buttonTutorial" style="top: 15%; -unity-font-style: bold;" />
+        <engine:Button text="Game 1" name="buttonGame1" style="top: 20%; -unity-font-style: bold;" />
+        <engine:Button text="Game 2" name="buttonGame2" style="top: 25%; -unity-font-style: bold;" />
+        <engine:Button text="Game 3" name="buttonGame3" style="top: 30%; -unity-font-style: bold;" />
+    </engine:VisualElement>
+</engine:UXML>

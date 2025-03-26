@@ -21,11 +21,11 @@ public class Game2Script : MonoBehaviour
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
-    {
+    { if(uiDocument!=null) {
          vElement=uiDocument.rootVisualElement;                  //sisxetisi ton stoixeion toy UI me kodika
          vElementContainer=vElement.Q<VisualElement>("timerContainer");
 
-        if(uiDocument!=null) {
+       
             timerTileLabel=vElement.Q<Label>("timerTile");
             timerAllLabel=vElement.Q<Label>("timerAll");
             percentTileLabel=vElement.Q<Label>("percentTile");
