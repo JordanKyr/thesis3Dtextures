@@ -231,7 +231,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6def7aaf99936b743a587e2bad40112e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doubleTap: 0.3
+  uIDocument: {fileID: 16057706}
+  hapticPlugin: {fileID: 386847813}
   typeAStart: {fileID: 1359806426}
   typeA2Start: {fileID: 569118185}
   typeBStart: {fileID: 1870979777}
@@ -248,6 +249,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 0cc8734ff46cd3d4094f2b85f530e05d, type: 3}
   - {fileID: 8300000, guid: 8d54ab54da1dbf64eb32227cb79f4ce5, type: 3}
   - {fileID: 8300000, guid: 01fc434f654db4b469186055d7991579, type: 3}
+  - {fileID: 8300000, guid: d85c40a2420cb0946b5378c657dee83d, type: 3}
+  - {fileID: 8300000, guid: 240fae392d938304aae4dbb6afc5b405, type: 3}
   - {fileID: 8300000, guid: a508e5d0c5ac2a64e83377d325feee2c, type: 3}
   - {fileID: 8300000, guid: 62720a8e3d1961b43856bb9499785bdf, type: 3}
   - {fileID: 8300000, guid: eb7f22bb09879314eae80facf0282a96, type: 3}
@@ -270,7 +273,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PanelSettings: {fileID: 11400000, guid: 272e44d42dfd4704dbc10b6562734b78, type: 2}
   m_ParentUI: {fileID: 0}
-  sourceAsset: {fileID: 9197481963319205126, guid: 9ed144a278f8b714c8e89f6da6e28d5d, type: 3}
+  sourceAsset: {fileID: 9197481963319205126, guid: 6db1aeb7085463d4b948aef0e7269d5c, type: 3}
   m_SortingOrder: 0
   m_WorldSpaceSizeMode: 1
   m_WorldSpaceWidth: 1920
@@ -282,7 +285,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 16057704}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3d3144bf76abd764a866f849b1115a3e, type: 3}
   m_Name: 
@@ -3081,8 +3084,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 300154349}
+  - component: {fileID: 300154351}
+  - component: {fileID: 300154350}
   m_Layer: 0
-  m_Name: Game Manager
+  m_Name: Tutorial Menu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3103,6 +3108,38 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &300154350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 300154348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3144bf76abd764a866f849b1115a3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menuDoc: {fileID: 300154351}
+--- !u!114 &300154351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 300154348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 19102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PanelSettings: {fileID: 11400000, guid: 272e44d42dfd4704dbc10b6562734b78, type: 2}
+  m_ParentUI: {fileID: 0}
+  sourceAsset: {fileID: 9197481963319205126, guid: 9ed144a278f8b714c8e89f6da6e28d5d, type: 3}
+  m_SortingOrder: 0
+  m_WorldSpaceSizeMode: 1
+  m_WorldSpaceWidth: 1920
+  m_WorldSpaceHeight: 1080
 --- !u!1001 &307532974
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21680,7 +21717,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3793659768638494586, guid: 8fc6805c7b966d44697f17dc3c0abf9d, type: 3}
       propertyPath: hStiffness
-      value: 1
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 6601007282032699996, guid: 8fc6805c7b966d44697f17dc3c0abf9d, type: 3}
       propertyPath: m_Name

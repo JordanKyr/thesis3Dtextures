@@ -1,19 +1,19 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
     <ui:VisualElement name="VisualElement" focusable="true" style="flex-grow: 0; width: 350px; background-color: rgba(255, 252, 0, 0.66); display: flex; visibility: visible; overflow: visible; opacity: 1; height: auto; background-size: 100% 100%; -unity-font-style: bold; bottom: auto; align-items: stretch; align-self: auto; transform-origin: center; scale: 1 1; position: relative; flex-wrap: wrap; flex-basis: auto; max-width: none; max-height: none; flex-direction: column; min-width: auto; -unity-background-image-tint-color: rgb(56, 56, 56);">
         <ui:Foldout text="Haptic Collider Properties" enabled="true" toggle-on-label-click="true" name="HapticColliderProp" value="false" style="height: auto; width: 350px; flex-wrap: nowrap;">
-            <ui:Slider label="Stiffness" value="1" high-value="1" name="Stiffness" show-input-field="true" />
+            <ui:Slider label="Stiffness" value="0.25" high-value="1" name="Stiffness" show-input-field="true" />
             <ui:Slider label="Static Friction" value="0" high-value="1" show-input-field="true" name="StaticFriction" />
             <ui:Slider label="DynamicFriction" value="0" high-value="1" name="DynamicFriction" show-input-field="true" />
             <ui:Button text="Apply Haptic" name="ApplyHaptic" style="height: 44px; width: 96px;" />
         </ui:Foldout>
-        <ui:Foldout text="Special Tiles" name="SpecialTiles" value="false" focusable="true" style="width: 350px; height: auto; flex-wrap: nowrap; flex-basis: auto;">
+        <ui:Foldout text="Special Tiles" name="SpecialTiles" value="false" focusable="true" enabled="true" style="width: 350px; height: auto; flex-wrap: nowrap; flex-basis: auto;">
             <ui:Slider label="Tile Stiffness" value="0" high-value="1" name="TileStiffness" show-input-field="true" />
             <ui:Slider label="Damping" value="0" high-value="1" name="TileDamping" show-input-field="true" />
             <ui:Slider label="Static Friction" value="0" high-value="1" name="TileStatic" fill="false" show-input-field="true" />
             <ui:Slider label="Dynamic Friction&#x9;&#x9;" value="0" high-value="1" show-input-field="true" name="TileDynamic" />
             <ui:Button text="Apply Tiles" name="ApplyTiles" style="width: 96px; height: 44px;" />
         </ui:Foldout>
-        <ui:Foldout text="Tile Presets" name="foldoutTilePresets" enabled="true" toggle-on-label-click="true" value="true">
+        <ui:Foldout text="Tile Presets" name="foldoutTilePresets" enabled="true" toggle-on-label-click="true" value="false">
             <ui:RadioButtonGroup tabindex="0" choices="Preset 1,Preset 2,Preset 3" name="radioTilePresets" value="2" />
         </ui:Foldout>
         <ui:Foldout text="Collider Presets" name="foldoutColliderPresets" toggle-on-label-click="true" value="false">

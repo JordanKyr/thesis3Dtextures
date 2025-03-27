@@ -150,7 +150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f26a683f788063a4fb93875fccc74779, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hStiffness: 1
+  hStiffness: 0.25
   hFrictionS: 0
   hFrictionD: 0
 --- !u!114 &15522987053340384

@@ -7,23 +7,24 @@ public class tutorialMenu : MonoBehaviour
 {
 
     public UIDocument menuDoc;
-    private Button buttonStart,buttonStop,buttonMainMenu;
+    private Button buttonStart,buttonMainMenu;
     private VisualElement visualElement;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
-    {
+    {   
+           
             pauseGame();  //stamataei to paixnidi stin enarksi
             
             visualElement=menuDoc.rootVisualElement;
         buttonStart=visualElement.Q<Button>("startTutorial");     //sisxetisi ton stoixeion toy UI me kodika
-        buttonStop=visualElement.Q<Button>("exitTutorial");
+        
         buttonMainMenu=visualElement.Q<Button>("buttonMainMenu");
 
         buttonMainMenu.clicked+= openMainMenu;
         buttonStart.clicked += resumeGame;
-        buttonStop.clicked += exitTutorial;
-    
+   
+
     
     }
 
@@ -57,15 +58,12 @@ public class tutorialMenu : MonoBehaviour
     }
 
     void resumeGame(){
-
+      
         Time.timeScale=1; //epistrefei sto paixnidi
         menuDoc.rootVisualElement.visible=false;  //krivei to menou
     }
 
-    void exitTutorial(){
-        SceneManager.LoadScene("Game 2");
-        resumeGame();
-    }
+
 
   
 }

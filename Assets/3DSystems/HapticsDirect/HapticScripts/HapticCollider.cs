@@ -48,7 +48,7 @@ class HapticCollider : MonoBehaviour
 
     [Label(title = "Stiffness")]
     [Slider(0, 1)]
-    public float hStiffness = 1.0f;
+    public float hStiffness =0.25f;
 
     [Header("Friction Properties")]
     [Label(title = "Static Friction")]

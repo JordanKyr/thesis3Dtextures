@@ -7,10 +7,14 @@ using UnityEngine.UIElements;
 public class TutorialScript : MonoBehaviour
 
 {
-    public float doubleTap=0.3f;    //xroniko parathiro gia double tap
+    public UIDocument uIDocument;
+    private VisualElement visualTutorialSteps;
+    private Label labelSteps;
+    private float doubleTap=0.3f;    //xroniko parathiro gia double tap
     private float lastTap=0f;       //teletaio patima space
-    private bool isWaiting=false;       //tsek an perimenei patima apo deftero space
-
+    private bool isWaiting=false, topButton=false, botButton=false;       //tsek an perimenei patima apo deftero space
+    
+    public HapticPlugin hapticPlugin;
 
     public Transform typeAStart,typeA2Start, typeBStart, typeCStart, typeDStart, asfaltosStart,pavementStart, player, playerRotation;  //simio anaforas gia metafora tou paikti sta diaforetika tiles
     private int index=0;
@@ -21,10 +25,24 @@ public class TutorialScript : MonoBehaviour
 
     public SphereCollider sphereCollider;
 
+    private enum tutorialStep { waitReturn, waitW, waitS,waitD,waitA, waitTopButton, waitBotButton}
+    private tutorialStep currentStep=tutorialStep.waitReturn;
+
+    void OnEnable()
+    {
+        visualTutorialSteps =uIDocument.rootVisualElement;
+        labelSteps=visualTutorialSteps.Q<Label>("labelSteps");
+
+       
+
+    }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
-    {
+    {   
         
+        
+
+
     }
 
     // Update is called once per frame
@@ -46,7 +64,6 @@ public class TutorialScript : MonoBehaviour
               
             }
 
-
         }
         if(isWaiting && Time.time-lastTap>doubleTap) {              //diaxeirisi single tap
             isWaiting=false;
@@ -55,7 +72,65 @@ public class TutorialScript : MonoBehaviour
 
         }
 
+
+        switch(currentStep)
+        {
+            case tutorialStep.waitReturn:
+                if(Input.GetKeyDown(KeyCode.Return)){
+                 PlayAudioTutorial(0);
+                 labelSteps.text="Press W to move forward";
+                 currentStep=tutorialStep.waitW;
+                }
+            break;
+            case tutorialStep.waitW:
+                if(Input.GetKeyDown(KeyCode.W)){
+                 PlayAudioTutorial(1);
+                 labelSteps.text="Press S to move backwards";
+                 currentStep=tutorialStep.waitS;
+                }
+            break;
+                case tutorialStep.waitS:
+                if(Input.GetKeyDown(KeyCode.S)){
+                 PlayAudioTutorial(2);
+                 labelSteps.text="Press D to move rightwards";
+                 currentStep=tutorialStep.waitD;
+                }
+            break;
+
+                case tutorialStep.waitD:
+                if(Input.GetKeyDown(KeyCode.D)){
+                 PlayAudioTutorial(3);
+                 labelSteps.text="Press A to move leftwards";
+                 currentStep=tutorialStep.waitA;
+                }
+            break;
+    
+                    case tutorialStep.waitA:
+                if(Input.GetKeyDown(KeyCode.A)){
+                PlayAudioTutorial(4);
+                labelSteps.text="Press the top button to turn left";
+                 currentStep=tutorialStep.waitTopButton;
+                
+                }
+                break;
+            case tutorialStep.waitTopButton:
+                if(hapticPlugin.topButton){
+                PlayAudioTutorial(5);
+                 labelSteps.text="Press the bottom button to turn right";
+                 currentStep=tutorialStep.waitBotButton;
+                }
+            break;
+              case tutorialStep.waitBotButton:
+                if(hapticPlugin.botButton){
+                 
+                 labelSteps.visible=false;
+                }
+            break;
+    
     }
+
+    }
+    
 
     void onDoubleSpace(){
     
@@ -67,7 +142,7 @@ public class TutorialScript : MonoBehaviour
                     newPosition.x=typeAStart.position.x;        
                     newPosition.z=typeAStart.position.z;
                     player.position=newPosition;
-                    PlayAudioTutorial(index+4);
+                    PlayAudioTutorial(index+6);
                     index++;
 
                 break;
@@ -77,7 +152,7 @@ public class TutorialScript : MonoBehaviour
                     newPosition.x=typeA2Start.position.x;        
                     newPosition.z=typeA2Start.position.z;
                     player.position=newPosition;
-                    PlayAudioTutorial(index+4);
+                    PlayAudioTutorial(index+6);
                     index++;
 
                 break;
@@ -87,7 +162,7 @@ public class TutorialScript : MonoBehaviour
                     newPosition.x=typeBStart.position.x;
                     newPosition.z=typeBStart.position.z;
                     player.position=newPosition;
-                    PlayAudioTutorial(index+4);
+                    PlayAudioTutorial(index+6);
                     index++;
                 break;
 
@@ -96,7 +171,7 @@ public class TutorialScript : MonoBehaviour
                     newPosition.x=typeCStart.position.x;
                     newPosition.z=typeCStart.position.z;
                     player.position=newPosition;
-                    PlayAudioTutorial(index+4);
+                    PlayAudioTutorial(index+6);
                     index++;
                 break;
 
@@ -105,7 +180,7 @@ public class TutorialScript : MonoBehaviour
                     newPosition.x=typeDStart.position.x;
                     newPosition.z=typeDStart.position.z;
                     player.position=newPosition;
-                    PlayAudioTutorial(index+4);
+                    PlayAudioTutorial(index+6);
                     index++;
                 break;
 
@@ -114,7 +189,7 @@ public class TutorialScript : MonoBehaviour
                     newPosition.x=pavementStart.position.x;
                     newPosition.z=pavementStart.position.z;
                     player.position=newPosition;
-                    PlayAudioTutorial(index+4);
+                    PlayAudioTutorial(index+6);
                     index++;
                 break;
 
@@ -125,7 +200,7 @@ public class TutorialScript : MonoBehaviour
                     newPosition.x=asfaltosStart.position.x;
                     newPosition.z=asfaltosStart.position.z;
                     player.position=newPosition;
-                    PlayAudioTutorial(index+4);
+                    PlayAudioTutorial(index+6);
                     index=0;
                 break;
             }   fpc.UpdateTargetPos(player.position); //enimerosi toy ActorHolder gia to neo position (alternative moving system)

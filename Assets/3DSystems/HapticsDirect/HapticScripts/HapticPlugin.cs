@@ -678,7 +678,7 @@ public class HapticPlugin : MonoBehaviour
     }
 
     public ContactPointInfo contactPInfo;
-
+    public bool topButton=false, botButton=false;
     public struct ContactInfo
     {
         public Vector3 AnchorPoint;
@@ -1765,7 +1765,8 @@ else{
             Events.OnClickButton1.Invoke();
           PlayerForRot.transform.Rotate(0, -90.0f, 0);
           firstPersonController.audioRight();
-
+             botButton=true;
+           
 
        
         }
@@ -1788,6 +1789,7 @@ else{
             Events.OnClickButton2.Invoke();
                PlayerForRot.transform.Rotate(0, 90.0f, 0);
                firstPersonController.audioLeft();
+              topButton=true;
            
         }
         if (LastButtons[1] == 1 && Buttons[1] == 1)

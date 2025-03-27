@@ -2554,7 +2554,7 @@ MonoBehaviour:
   uiDocument: {fileID: 493481870}
   hapticCollider: {fileID: 1991785166553591635}
   hapticActor: {fileID: 3949246279522282562}
-  specialTile: {fileID: 0}
+  specialTile: {fileID: 979398428}
 --- !u!4 &493481872
 Transform:
   m_ObjectHideFlags: 0
@@ -4170,6 +4170,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e08b58339b01cfa43a5c32f00f32d04b, type: 3}
+--- !u!1 &979398428 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7281949345539814798, guid: e08b58339b01cfa43a5c32f00f32d04b, type: 3}
+  m_PrefabInstance: {fileID: 979398427}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &988634654
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8657,7 +8662,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3793659768638494586, guid: 8fc6805c7b966d44697f17dc3c0abf9d, type: 3}
       propertyPath: hStiffness
-      value: 1
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 6601007282032699996, guid: 8fc6805c7b966d44697f17dc3c0abf9d, type: 3}
       propertyPath: m_Name

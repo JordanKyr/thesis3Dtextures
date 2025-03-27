@@ -51,7 +51,8 @@ public class StylusSettings : MonoBehaviour
 
         if (hapticCollider != null)                                                                             //pairno arxikes times oti exei idi to plugin apo to Inspector
         {
-            slStiffness.value = hapticCollider.GetComponent<HapticCollider>().hStiffness;
+           // slStiffness.value = hapticCollider.GetComponent<HapticCollider>().hStiffness;
+           slStiffness.value = 0.5f;
             slDynFriction.value = hapticCollider.GetComponent<HapticCollider>().hFrictionD;
             slStFriction.value=hapticCollider.GetComponent<HapticCollider>().hFrictionS;
         }
@@ -94,6 +95,8 @@ public class StylusSettings : MonoBehaviour
     }
 
     void applyColliderPreset(int presetNumber){
+
+         presetSettings.Instance.globalColliderPreset=presetNumber;
             switch(presetNumber){
                 case 0:                                         //mikro collider
                   hapticCollider.transform.localScale=new Vector3(0.01f,0.01f,0.01f);
@@ -119,6 +122,8 @@ public class StylusSettings : MonoBehaviour
 
                  GameObject[] allTiles=GameObject.FindObjectsOfType<GameObject>();
 
+             presetSettings.Instance.globalTilePreset=presetNumber;   //enimerono to global preset setting
+
             switch(presetNumber)
             {
                 case 0:
@@ -128,10 +133,10 @@ public class StylusSettings : MonoBehaviour
                     if(gameObject.name.StartsWith("type")){
                             HapticMaterial hapticMaterial=gameObject.GetComponent<HapticMaterial>();
                         if(hapticMaterial!=null ){
-                                hapticMaterial.hStiffness=1.0f;
-                                hapticMaterial.hDamping=1.0f;
-                                hapticMaterial.hFrictionD=0.25f;
-                                hapticMaterial.hFrictionS=0.25f;
+                               slTileStiff.value=  hapticMaterial.hStiffness=1.0f;
+                              slDamp.value=  hapticMaterial.hDamping=1.0f;
+                                slDynTile.value= hapticMaterial.hFrictionD=0.25f;
+                               slStatTile.value=  hapticMaterial.hFrictionS=0.25f;
                         } 
 
                     }}
@@ -143,10 +148,10 @@ public class StylusSettings : MonoBehaviour
                     if(gameObject.name.StartsWith("type")){
                             HapticMaterial hapticMaterial=gameObject.GetComponent<HapticMaterial>();
                         if(hapticMaterial!=null ){
-                                hapticMaterial.hStiffness=1.0f;
-                                hapticMaterial.hDamping=1.0f;
-                                hapticMaterial.hFrictionD=0.5f;
-                                hapticMaterial.hFrictionS=0.5f;
+                              slTileStiff.value=   hapticMaterial.hStiffness=1.0f;
+                               slDamp.value= hapticMaterial.hDamping=1.0f;
+                               slDynTile.value=  hapticMaterial.hFrictionD=0.5f;
+                                slStatTile.value= hapticMaterial.hFrictionS=0.5f;
                         } 
 
                     }}
@@ -159,10 +164,10 @@ public class StylusSettings : MonoBehaviour
                     if(gameObject.name.StartsWith("type")){
                             HapticMaterial hapticMaterial=gameObject.GetComponent<HapticMaterial>();
                         if(hapticMaterial!=null ){
-                                hapticMaterial.hStiffness=1.0f;
-                                hapticMaterial.hDamping=1.0f;
-                                hapticMaterial.hFrictionD=0.75f;
-                                hapticMaterial.hFrictionS=0.75f;
+                               slTileStiff.value= hapticMaterial.hStiffness=1.0f;
+                               slDamp.value= hapticMaterial.hDamping=1.0f;
+                                slDynTile.value= hapticMaterial.hFrictionD=0.75f;
+                                slStatTile.value=hapticMaterial.hFrictionS=0.75f;
                         } 
 
                     }}
@@ -172,7 +177,6 @@ public class StylusSettings : MonoBehaviour
 
 
             }
-
 
 
     }
@@ -187,7 +191,7 @@ public class StylusSettings : MonoBehaviour
    
 
     void ApplyTiles(){
-        //specialTile.GetComponent<HapticMaterial>().hStiffness=slTileStiff.value;    //allazo ola ta special tiles
+        specialTile.GetComponent<HapticMaterial>().hStiffness=slTileStiff.value;    //allazo ola ta special tiles
 
         GameObject[] allTiles=GameObject.FindObjectsOfType<GameObject>();
 
@@ -214,15 +218,26 @@ public class StylusSettings : MonoBehaviour
         UnityEngine.Cursor.visible=true;
         UnityEngine.Cursor.lockState=CursorLockMode.None;
 
+      
+
+       if(presetSettings.Instance.globalColliderPreset!=null && presetSettings.Instance.globalTilePreset!=null){
+            radioColliderPresets.value=presetSettings.Instance.globalColliderPreset;
+            radioTilePresets.value=presetSettings.Instance.globalTilePreset;
+        }else
+        {
         radioColliderPresets.value=1;
-        radioTilePresets.value=-1;
-         
+         radioTilePresets.value=-1;
+
+        }
+        
     }
 
     // Update is called once per frame
     void Update()
     {
         
+      
+           
     }
 
 

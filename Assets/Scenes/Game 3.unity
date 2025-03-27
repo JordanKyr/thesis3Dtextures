@@ -61288,7 +61288,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3793659768638494586, guid: 8fc6805c7b966d44697f17dc3c0abf9d, type: 3}
       propertyPath: hStiffness
-      value: 1
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 6601007282032699996, guid: 8fc6805c7b966d44697f17dc3c0abf9d, type: 3}
       propertyPath: m_Name
