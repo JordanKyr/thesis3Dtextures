@@ -8242,7 +8242,7 @@ MonoBehaviour:
   firstPersonController: {fileID: 2070598435}
   isGround:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 65
 --- !u!1001 &2081273164
 PrefabInstance:
   m_ObjectHideFlags: 0

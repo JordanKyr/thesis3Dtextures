@@ -97,7 +97,7 @@ public class SceneControl : MonoBehaviour
 
             if (Input.GetKey("escape"))
             {
-                Application.Quit();
+               // Application.Quit();
             }
 
         }

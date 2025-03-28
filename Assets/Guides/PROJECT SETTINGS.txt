@@ -1,0 +1,11 @@
+physics -> 
+    default contact offset 0.005
+    default solver iterations 12
+    default solver velocity it 2
+    enable adaptive force check
+
+player -> 
+    api .net framework
+
+time ->
+    fixed timestep 0.005

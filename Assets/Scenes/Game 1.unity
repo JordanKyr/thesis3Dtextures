@@ -231,7 +231,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6def7aaf99936b743a587e2bad40112e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doubleTap: 0.3
+  uIDocument: {fileID: 0}
+  hapticPlugin: {fileID: 0}
   typeAStart: {fileID: 0}
   typeA2Start: {fileID: 0}
   typeBStart: {fileID: 0}
@@ -1681,6 +1682,14 @@ PrefabInstance:
       propertyPath: limitLayer.m_Bits
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3107019966609736649, guid: 378d5ad6d55b12c4e9cda03d2161f70d, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: b07d582d789b3414eb6a3bc8b84e2ea3, type: 3}
+    - target: {fileID: 3107019966609736649, guid: 378d5ad6d55b12c4e9cda03d2161f70d, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: b07d582d789b3414eb6a3bc8b84e2ea3, type: 3}
     - target: {fileID: 3655827840417762123, guid: 378d5ad6d55b12c4e9cda03d2161f70d, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -1701,6 +1710,14 @@ PrefabInstance:
       propertyPath: VisualizationMesh
       value: 
       objectReference: {fileID: 1631079882}
+    - target: {fileID: 7435138465048591721, guid: 378d5ad6d55b12c4e9cda03d2161f70d, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: 7b4e9a35f9b25cf4ea0f9f4669936548, type: 3}
+    - target: {fileID: 7435138465048591721, guid: 378d5ad6d55b12c4e9cda03d2161f70d, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 7b4e9a35f9b25cf4ea0f9f4669936548, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

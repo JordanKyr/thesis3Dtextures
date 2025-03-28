@@ -10,11 +10,17 @@ public class tutorialMenu : MonoBehaviour
     private Button buttonStart,buttonMainMenu;
     private VisualElement visualElement;
 
+
+
+    void Awake()
+    {
+        pauseGame();
+    }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {   
            
-            pauseGame();  //stamataei to paixnidi stin enarksi
+           // pauseGame();  //stamataei to paixnidi stin enarksi
             
             visualElement=menuDoc.rootVisualElement;
         buttonStart=visualElement.Q<Button>("startTutorial");     //sisxetisi ton stoixeion toy UI me kodika

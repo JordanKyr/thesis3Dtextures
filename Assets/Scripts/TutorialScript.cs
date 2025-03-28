@@ -30,8 +30,7 @@ public class TutorialScript : MonoBehaviour
 
     void OnEnable()
     {
-        visualTutorialSteps =uIDocument.rootVisualElement;
-        labelSteps=visualTutorialSteps.Q<Label>("labelSteps");
+     
 
        
 
@@ -40,7 +39,8 @@ public class TutorialScript : MonoBehaviour
     void Start()
     {   
         
-        
+           visualTutorialSteps =uIDocument.rootVisualElement;
+        labelSteps=visualTutorialSteps.Q<Label>("labelSteps");
 
 
     }
@@ -48,7 +48,11 @@ public class TutorialScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-                                                                        //elegxos an exei patithei space
+      //Debug.Log($"Top Button: {hapticPlugin.topButton}, Bottom Button: {hapticPlugin.botButton}");
+
+
+
+                                 //elegxos an exei patithei space
         if(Input.GetKeyDown(KeyCode.Space)){                            //elegxos an exei patithei prin space kai einai sta xronia plaisia
             if(isWaiting && Time.time - lastTap<=doubleTap){
                 Debug.Log("Double Tap");

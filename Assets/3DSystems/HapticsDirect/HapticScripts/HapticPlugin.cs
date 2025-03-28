@@ -705,9 +705,9 @@ public class HapticPlugin : MonoBehaviour
         LastButtons = new int[4];
 
         for(int i = 0; i<4; i++)
-        {
-            Buttons[i] = 0;
-            LastButtons[i] = 0;
+        {                                               //allagi apo 0 se -1 giati energopoiite mono toy?
+            Buttons[i] = -1;
+            LastButtons[i] = -1;
             
         }
 
@@ -1750,10 +1750,16 @@ else{
          FirstPersonController firstPersonController=GetComponentInParent<FirstPersonController>();      //gia na kaleso methodous toy parent      
         int[] LastButtonsT = new int[4];
 
+
+                
         LastButtons[0] = Buttons[0];
         LastButtons[1] = Buttons[1];
         LastButtons[2] = Buttons[2];
         LastButtons[3] = Buttons[3];
+
+
+
+
 
         getButtons(DeviceIdentifier, Buttons, LastButtonsT,ref inkwell);
 

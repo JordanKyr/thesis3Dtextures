@@ -68,9 +68,9 @@ public class Game2Script : MonoBehaviour
         }
 
 
-        if(Input.GetKeyDown(KeyCode.Escape) && Time.timeScale==1) pausedUITimer();
+        /*if(Input.GetKeyDown(KeyCode.Escape) && Time.timeScale==1) pausedUITimer();
         else if(Time.timeScale==1) returnUITimer();
-
+        */
         
     
     }
@@ -82,7 +82,7 @@ private void returnUITimer(){
            
 
 }
-     private void pausedUITimer(){
+     /*private void pausedUITimer(){
            
             vElementContainer.style.alignSelf=Align.Center;
             vElementContainer.style.backgroundColor=new Color(0.4386792f,0.6273584f,1.0f, 0.6f);
@@ -90,7 +90,7 @@ private void returnUITimer(){
 
 
 
-    }
+    }*/
 
 
     private void checkTile(){               //elegxos me raycast an yparxei apo kato to sosto tile i stin asfalto

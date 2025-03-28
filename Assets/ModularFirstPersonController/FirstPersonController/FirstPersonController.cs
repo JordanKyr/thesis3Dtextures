@@ -10,12 +10,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEditor.UIElements;
+//using UnityEditor.UIElements;
 
 
 #if UNITY_EDITOR
-using UnityEditor;
-    using System.Net;
+        using UnityEditor;
+        using UnityEditor.UIElements; 
+        using UnityEngine.UIElements; 
+        using System.Net;
 #endif
 
 public class FirstPersonController : MonoBehaviour
@@ -125,7 +127,7 @@ public class FirstPersonController : MonoBehaviour
 
         
         #endregion
-
+/*                                  //disable movement with E and Q
         #region Turn 90
     	if(Input.GetKeyDown(turnLeft)){
              Player.transform.Rotate(0, 90.0f, 0);
@@ -135,22 +137,13 @@ public class FirstPersonController : MonoBehaviour
         if(Input.GetKeyDown(turnRight)){
              Player.transform.Rotate(0, -90.0f, 0);
              audioRight();
-        }
-        
+        } 
         #endregion 
+  */      
+       
 
         CheckGround();
-
-    }
-    public void audioLeft(){
-        if(audioSourceLeft!=null && !audioSourceLeft.isPlaying) audioSourceLeft.Play();
-    }
-    public void audioRight(){
-        if(audioSourceRight!=null && !audioSourceRight.isPlaying) audioSourceRight.Play();
-    }
-    void FixedUpdate()
-    {
-        #region Movement
+            #region Movement
 
         if (playerCanMove)
         {
@@ -223,6 +216,17 @@ public class FirstPersonController : MonoBehaviour
         }
 
         #endregion
+
+    }
+    public void audioLeft(){
+        if(audioSourceLeft!=null && !audioSourceLeft.isPlaying) audioSourceLeft.Play();
+    }
+    public void audioRight(){
+        if(audioSourceRight!=null && !audioSourceRight.isPlaying) audioSourceRight.Play();
+    }
+    void FixedUpdate()
+    {
+    
     }
     private bool isInLimits(Vector3 targetPos){             //elegxos me raycast an iparxei empodio
     
