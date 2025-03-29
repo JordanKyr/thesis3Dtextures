@@ -41,6 +41,7 @@ public class secondMenu : MonoBehaviour
  void openMainMenu()
     {
         SceneManager.LoadScene("Main Menu");
+        mainMenuScript.Instance.visualElement.visible=true;
 
     }
 

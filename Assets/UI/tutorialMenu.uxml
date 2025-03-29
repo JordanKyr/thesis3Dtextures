@@ -1,7 +1,8 @@
 <engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <engine:VisualElement name="VisualElement" style="flex-grow: 1; background-color: rgb(255, 249, 143);">
+    <Style src="project://database/Assets/UI/yellowBackground.uss?fileID=7433441132597879392&amp;guid=615c44c8db1b7154db26e5d6e3e6171c&amp;type=3#yellowBackground" />
+    <engine:VisualElement name="VisualElement" class="yellowBackground" style="flex-grow: 1;">
         <engine:Label text="Welcome&#10;Tutorial Menu" name="tutoriaLabel" triple-click-selects-line="true" style="-unity-text-align: upper-center; -unity-font-style: bold; top: 25%;" />
-        <engine:Button text="Start Tutorial" name="startTutorial" style="top: 40%; -unity-font-style: bold;" />
-        <engine:Button text="Main Menu" name="buttonMainMenu" style="top: 55%; -unity-font-style: bold;" />
+        <engine:Button text="Start Tutorial" name="startTutorial" class="blueButton" style="top: 40%; -unity-font-style: bold;" />
+        <engine:Button text="Main Menu" name="buttonMainMenu" class="blueButton" style="top: 55%; -unity-font-style: bold;" />
     </engine:VisualElement>
 </engine:UXML>

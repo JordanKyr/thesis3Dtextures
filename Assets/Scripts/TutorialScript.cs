@@ -12,7 +12,7 @@ public class TutorialScript : MonoBehaviour
     private Label labelSteps;
     private float doubleTap=0.3f;    //xroniko parathiro gia double tap
     private float lastTap=0f;       //teletaio patima space
-    private bool isWaiting=false, topButton=false, botButton=false;       //tsek an perimenei patima apo deftero space
+    private bool isWaiting=false;       //tsek an perimenei patima apo deftero space
     
     public HapticPlugin hapticPlugin;
 

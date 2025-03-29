@@ -1,0 +1,10 @@
+.yellowBackground {
+    flex-grow: 1;
+    background-color: rgb(255, 240, 155);
+}
+
+.blueButton {
+    top: 15%;
+    -unity-font-style: bold;
+    background-color: rgb(151, 219, 221);
+}

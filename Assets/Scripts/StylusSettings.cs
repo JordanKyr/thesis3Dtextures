@@ -18,6 +18,8 @@ public class StylusSettings : MonoBehaviour
     private RadioButtonGroup radioTilePresets, radioColliderPresets;
 
 
+
+
     void OnEnable(){
         
 
@@ -97,6 +99,8 @@ public class StylusSettings : MonoBehaviour
     void applyColliderPreset(int presetNumber){
 
          presetSettings.Instance.globalColliderPreset=presetNumber;
+         mainMenuScript.Instance.setColliderPreset();                //UPDATE MAIN MENU LABEL
+
             switch(presetNumber){
                 case 0:                                         //mikro collider
                   hapticCollider.transform.localScale=new Vector3(0.01f,0.01f,0.01f);
@@ -108,7 +112,7 @@ public class StylusSettings : MonoBehaviour
                 break;
                 
                 case 2:                 //megalo collider
-            hapticCollider.transform.localScale=new Vector3(0.05f,0.05f,0.05f);
+            hapticCollider.transform.localScale=new Vector3(0.04f,0.04f,0.04f);
                 break;
 
             }
@@ -122,8 +126,9 @@ public class StylusSettings : MonoBehaviour
 
                  GameObject[] allTiles=GameObject.FindObjectsOfType<GameObject>();
 
-             presetSettings.Instance.globalTilePreset=presetNumber;   //enimerono to global preset setting
-
+                        presetSettings.Instance.globalTilePreset=presetNumber;   //enimerono to global preset setting
+                         mainMenuScript.Instance.setMaterialPreset();       //UPDATE MAIN MENU LABEL
+                    
             switch(presetNumber)
             {
                 case 0:

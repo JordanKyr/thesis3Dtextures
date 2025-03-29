@@ -15,6 +15,7 @@ public class Game1Script : MonoBehaviour
     private VisualElement visualElement;
     private Label labelTimer;
 
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {   
@@ -22,18 +23,21 @@ public class Game1Script : MonoBehaviour
         replaceTiles();
              visualElement=uIDocument.rootVisualElement;                  //sisxetisi ton stoixeion toy UI me kodika
                 labelTimer=visualElement.Q<Label>("labelTimer");
-
+           
                  
     }
 
     // Update is called once per frame
     void Update()
     {   timerAll+=Time.deltaTime;  
+        globalSettings.Instance.globalGame1Time=timerAll;
+        mainMenuScript.Instance.setGame1Time();
     if(labelTimer!=null) {
                 
             labelTimer.text=$"Timer: {timerAll:F2} sec"; //provoli sto label me format F2
+
     }
-        
+      
     }
 
     public void replaceTiles(){

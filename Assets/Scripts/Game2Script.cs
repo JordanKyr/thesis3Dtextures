@@ -40,7 +40,13 @@ public class Game2Script : MonoBehaviour
     {
         
         timerAll+=Time.deltaTime;               //metraei olo ton xrono
+        globalSettings.Instance.globalGame2Time=timerAll;
+        mainMenuScript.Instance.setGame2Time();
+        
+        
         checkTile();
+
+
         if(!isOnTile) timerTile+=Time.deltaTime;  //otan den einai sta tiles tote auksanete
         
         if(timerAllLabel!=null) {
@@ -65,12 +71,15 @@ public class Game2Script : MonoBehaviour
 
           if(labelMistakes!=null){
            labelMistakes.text=$"Mistakes: {firstPersonController.getMistakeCount()}";  
+           globalSettings.Instance.globalGame2Mistakes=firstPersonController.getMistakeCount();
+           mainMenuScript.Instance.setGame2Mistakes();
+        }
         }
 
 
         /*if(Input.GetKeyDown(KeyCode.Escape) && Time.timeScale==1) pausedUITimer();
         else if(Time.timeScale==1) returnUITimer();
-        */
+     
         
     
     }
@@ -82,7 +91,7 @@ private void returnUITimer(){
            
 
 }
-     /*private void pausedUITimer(){
+     private void pausedUITimer(){
            
             vElementContainer.style.alignSelf=Align.Center;
             vElementContainer.style.backgroundColor=new Color(0.4386792f,0.6273584f,1.0f, 0.6f);

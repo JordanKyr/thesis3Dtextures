@@ -1,0 +1,5 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <engine:VisualElement style="flex-grow: 1; align-items: center;">
+        <engine:Label text="Press ENTER  to Start" name="labelSteps" style="-unity-text-align: upper-center; background-color: rgba(231, 243, 130, 0.61); -unity-font-style: bold; font-size: 36px; top: 30%;" />
+    </engine:VisualElement>
+</engine:UXML>

@@ -40,6 +40,9 @@ public class TileTimer : MonoBehaviour
     {
         
         timerAll+=Time.deltaTime;               //metraei olo ton xrono
+         globalSettings.Instance.globalGame3Time=timerAll;
+        mainMenuScript.Instance.setGame3Time();
+        
         checkTile();
         if(!isOnTile) timerTile+=Time.deltaTime;  //otan den einai sta tiles tote auksanete
         
@@ -61,11 +64,15 @@ public class TileTimer : MonoBehaviour
 
         if(percentTileLabel!=null){
             percentTileLabel.text=$"Percent on Path: {Mathf.Round(timePerc)}%";  
+            globalSettings.Instance.globalGame3Percent=Mathf.Round(timePerc);
+            mainMenuScript.Instance.setGame3Percent();
+            
         }
-
+    }
+/*
         if(Input.GetKeyDown(KeyCode.Escape) && Time.timeScale==1) pausedUITimer();
         else if(Time.timeScale==1) returnUITimer();
-    
+ 
     }
 
 private void returnUITimer(){
@@ -84,7 +91,7 @@ private void returnUITimer(){
 
 
     }
-
+ */  
 
     private void checkTile(){               //elegxos me raycast an yparxei apo kato to sosto tile i stin asfalto
         RaycastHit raycastHit;                                                                              

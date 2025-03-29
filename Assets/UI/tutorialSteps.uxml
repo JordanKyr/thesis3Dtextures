@@ -1,5 +1,0 @@
-<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <engine:VisualElement name="visualTutorialSteps" enabled="true" style="flex-grow: 1; justify-content: space-around; background-color: rgba(0, 0, 0, 0); width: 100%; height: 100%; align-self: auto; align-items: center; align-content: auto;">
-        <engine:Label text="Press &apos;ENTER&apos; to Start!" name="labelSteps" style="-unity-font-style: bold; font-size: 50px; -unity-text-align: upper-center; color: rgb(0, 0, 0); background-color: rgba(255, 250, 59, 0.26); top: -20%;" />
-    </engine:VisualElement>
-</engine:UXML>
