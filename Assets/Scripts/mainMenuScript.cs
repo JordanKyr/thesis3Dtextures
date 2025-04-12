@@ -16,7 +16,7 @@ public class mainMenuScript : MonoBehaviour
     public VisualElement visualElement;
     private Button buttonTutorial, buttonGame1, buttonGame2, buttonGame3;
 
-    private Label labelColliderSelected, labelMaterialSelected, labelGame1Time, labelGame2Time, labelGame2Mistakes, labelGame3Time, labelGame3Percent;
+    private Label labelColliderSelected, labelMaterialSelected, labelGame1Time, labelGame2Time, labelGame2Mistakes, labelGame3Time, labelGame3Percent ,labelCorrectOrder;
 
 
 
@@ -38,6 +38,7 @@ public class mainMenuScript : MonoBehaviour
         labelGame2Mistakes=visualElement.Q<Label>("labelGame2Mistakes");
         labelGame3Time=visualElement.Q<Label>("labelGame3Time");
         labelGame3Percent=visualElement.Q<Label>("labelGame3Percent");
+        labelCorrectOrder=visualElement.Q<Label>("labelCorrectOrder");
 
         buttonGame1.clicked+=openGame1;
         buttonGame2.clicked+=openGame2;
@@ -134,5 +135,9 @@ public class mainMenuScript : MonoBehaviour
 
     public void setGame3Time(){
         if(globalSettings.Instance.globalGame3Time!=0) labelGame3Time.text= "Time: "+globalSettings.Instance.globalGame3Time.ToString("F2");
+    }
+
+    public void setCorrectOrder(){
+        if(globalSettings.Instance.globalCorrectOrder!="") labelCorrectOrder.text="Correct Order: "+globalSettings.Instance.globalCorrectOrder;
     }
 }

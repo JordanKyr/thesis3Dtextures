@@ -42,21 +42,38 @@ public class Game1Script : MonoBehaviour
 
     public void replaceTiles(){
 
-        List<GameObject> randomList=originals.OrderBy(x=> Random.value).ToList();       //anakateuei tin original lista
+        string newOrder="";
+
+        List<int> indices = Enumerable.Range(0,originals.Count).ToList();       //ftiaxno ena set me indices kai kano ayto shuffle
+        indices=indices.OrderBy(x=> Random.value).ToList();
+        
+        List<GameObject> randomListRepl=replacements.OrderBy(x=> Random.value).ToList();
+        
+        List<string> replacementOrder = new List<string>();
 
         for(int i=0; i<5 ; i++){
 
-            UnityEngine.Vector3 orn=randomList[i].transform.position;
-            UnityEngine.Vector3 rpl=replacements[i].transform.position;
+             int shuffledIndex = indices[i];
 
-             replacements[i].transform.position=new UnityEngine.Vector3( orn.x, rpl.y,orn.z); 
+            UnityEngine.Vector3 orn=originals[i].transform.position;
+            UnityEngine.Vector3 rpl=randomListRepl[shuffledIndex].transform.position;
+            
+
+             randomListRepl[shuffledIndex].transform.position=new UnityEngine.Vector3( orn.x, rpl.y,orn.z); 
+             
+            // replacementOrder.Add(replacements[shuffledIndex].name);
+             
+             newOrder+=randomListRepl[shuffledIndex].name+",";
              
 
-            Destroy(randomList[i]);
+            Destroy(originals[shuffledIndex]);
 
            
 
         }
 
+        //globalSettings.Instance.globalCorrectOrder= string.Join(", ", replacementOrder);
+        globalSettings.Instance.globalCorrectOrder=newOrder;
+        mainMenuScript.Instance.setCorrectOrder();
     }
 }

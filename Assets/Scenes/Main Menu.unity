@@ -502,6 +502,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   globalGame1Time: 0
+  globalGame2Time: 0
+  globalGame3Time: 0
+  globalGame3Percent: -1
+  globalGame2Mistakes: -1
+  globalCorrectOrder: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

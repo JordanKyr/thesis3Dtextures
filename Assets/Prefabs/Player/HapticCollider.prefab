@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 3817507547460189773}
   - component: {fileID: 5106896073346557081}
   - component: {fileID: 3793659768638494586}
-  - component: {fileID: 15522987053340384}
   m_Layer: 9
   m_Name: HapticCollider
   m_TagString: Untagged
@@ -153,16 +152,3 @@ MonoBehaviour:
   hStiffness: 0.25
   hFrictionS: 0
   hFrictionD: 0
---- !u!114 &15522987053340384
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6601007282032699996}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b627248cf9ebaa4cbdd5593a1c4c1f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  minY: 0

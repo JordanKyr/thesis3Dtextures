@@ -127,7 +127,7 @@ public class FirstPersonController : MonoBehaviour
 
         
         #endregion
-/*                                  //disable movement with E and Q
+                                 //disable movement with E and Q
         #region Turn 90
     	if(Input.GetKeyDown(turnLeft)){
              Player.transform.Rotate(0, 90.0f, 0);
@@ -139,7 +139,7 @@ public class FirstPersonController : MonoBehaviour
              audioRight();
         } 
         #endregion 
-  */      
+  
        
 
         CheckGround();
@@ -309,6 +309,8 @@ public class FirstPersonController : MonoBehaviour
 
         fpc.playerCamera = (Camera)EditorGUILayout.ObjectField(new GUIContent("Camera", "Camera attached to the controller."), fpc.playerCamera, typeof(Camera), true);
         fpc.fov = EditorGUILayout.Slider(new GUIContent("Field of View", "The camera’s view angle. Changes the player camera directly."), fpc.fov, 10f, 179f);
+        
+        /*
         fpc.cameraCanMove = EditorGUILayout.ToggleLeft(new GUIContent("Enable Camera Rotation", "Determines if the camera is allowed to move."), fpc.cameraCanMove);
 
         GUI.enabled = fpc.cameraCanMove;
@@ -318,7 +320,7 @@ public class FirstPersonController : MonoBehaviour
         GUI.enabled = true;
 
         fpc.lockCursor = EditorGUILayout.ToggleLeft(new GUIContent("Lock and Hide Cursor", "Turns off the cursor visibility and locks it to the middle of the screen."), fpc.lockCursor);
-
+*/
         EditorGUILayout.Space();
 
         #endregion

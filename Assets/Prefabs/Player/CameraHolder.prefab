@@ -12,8 +12,6 @@ GameObject:
   - component: {fileID: 460439664754478486}
   - component: {fileID: 2739472121601587389}
   - component: {fileID: 4622202165396338062}
-  - component: {fileID: 5044178810670906762}
-  - component: {fileID: 3902574356099365585}
   m_Layer: 0
   m_Name: PlayerCam
   m_TagString: Untagged
@@ -139,41 +137,6 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
---- !u!114 &5044178810670906762
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3333915631026755040}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e77ff27dee8ed81498083f24aee2c957, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  uiDocument: {fileID: 3902574356099365585}
-  isGround:
-    serializedVersion: 2
-    m_Bits: 1
---- !u!114 &3902574356099365585
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3333915631026755040}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 19102, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_PanelSettings: {fileID: 11400000, guid: 272e44d42dfd4704dbc10b6562734b78, type: 2}
-  m_ParentUI: {fileID: 0}
-  sourceAsset: {fileID: 9197481963319205126, guid: 503e811f8b416824abc35f5887bd44e6, type: 3}
-  m_SortingOrder: 0
-  m_WorldSpaceSizeMode: 1
-  m_WorldSpaceWidth: 1920
-  m_WorldSpaceHeight: 1080
 --- !u!1 &5145968645088142032
 GameObject:
   m_ObjectHideFlags: 0

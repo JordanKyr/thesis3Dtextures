@@ -18,5 +18,6 @@
         <engine:Label text="Game 3: " enable-rich-text="true" style="left: 657px; top: 489px; -unity-text-align: upper-center; align-items: center; align-self: center; align-content: auto; position: absolute; font-size: 18px; -unity-font-style: bold-and-italic;" />
         <engine:Label text="Time:" name="labelGame3Time" style="position: absolute; top: 526px; left: 659px; -unity-font-style: bold;" />
         <engine:Label text="Percent on Path: " name="labelGame3Percent" style="position: absolute; top: 564px; left: 654px; -unity-font-style: bold;" />
+        <engine:Label text="Correct Order:" name="labelCorrectOrder" selectable="false" style="position: absolute; top: 611px; left: 299px; -unity-font-style: bold;" />
     </engine:VisualElement>
 </engine:UXML>

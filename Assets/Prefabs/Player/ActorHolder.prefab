@@ -78,11 +78,18 @@ MonoBehaviour:
   playerCanMove: 1
   walkSpeed: 1
   maxVelocityChange: 10
+  tileSize: 0.4
+  targetPos: {x: 0, y: 0, z: 0}
+  limitLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  altWalkSpeed: 7
   turnLeft: 113
   turnRight: 101
   Player: {fileID: 0}
   audioSourceLeft: {fileID: 7435138465048591721}
   audioSourceRight: {fileID: 3107019966609736649}
+  audioSourceLimit: {fileID: 0}
 --- !u!54 &1021495553838113783
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -494,7 +501,6 @@ GameObject:
   - component: {fileID: 4514413396329155054}
   - component: {fileID: 6284615885530426647}
   - component: {fileID: 3720658521170438421}
-  - component: {fileID: 2322144265892102445}
   m_Layer: 8
   m_Name: HapticActor_DefaultDevice
   m_TagString: Untagged
@@ -606,9 +612,9 @@ MonoBehaviour:
   SliderTYZ0: {x: 45, y: 65}
   SliderTYZ1n: {x: 12, y: 45}
   labelOnly5: 
-  SliderTZZ1p: {x: 60, y: 100}
+  SliderTZZ1p: {x: 10, y: 100}
   SliderTZZ0: {x: 0, y: 10}
-  SliderTZZ1n: {x: -3, y: 40}
+  SliderTZZ1n: {x: -3, y: 0}
   labelOnly6: 
   SliderRXZ1p: {x: 15, y: 95}
   SliderRXZ0: {x: -15, y: 15}
@@ -638,6 +644,8 @@ MonoBehaviour:
   bIsGrabbingActive: 0
   bIsGrabbing: 0
   bIsRelease: 0
+  topButton: 0
+  botButton: 0
   targetY: -0.16
 --- !u!33 &3720658521170438421
 MeshFilter:
@@ -647,26 +655,3 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1738618043951122592}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
---- !u!136 &2322144265892102445
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1738618043951122592}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Radius: 0.05
-  m_Height: 1
-  m_Direction: 1
-  m_Center: {x: 0, y: 0.4, z: 0}
