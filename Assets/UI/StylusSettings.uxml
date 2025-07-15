@@ -6,7 +6,7 @@
             <ui:Slider label="DynamicFriction" value="0" high-value="1" name="DynamicFriction" show-input-field="true" />
             <ui:Button text="Apply Haptic" name="ApplyHaptic" style="height: 44px; width: 96px;" />
         </ui:Foldout>
-        <ui:Foldout text="Special Tiles" name="SpecialTiles" value="false" focusable="true" enabled="true" style="width: 350px; height: auto; flex-wrap: nowrap; flex-basis: auto;">
+        <ui:Foldout text="Haptic Material" name="SpecialTiles" value="false" focusable="true" enabled="true" style="width: 350px; height: auto; flex-wrap: nowrap; flex-basis: auto;">
             <ui:Slider label="Tile Stiffness" value="0" high-value="1" name="TileStiffness" show-input-field="true" />
             <ui:Slider label="Damping" value="0" high-value="1" name="TileDamping" show-input-field="true" />
             <ui:Slider label="Static Friction" value="0" high-value="1" name="TileStatic" fill="false" show-input-field="true" />

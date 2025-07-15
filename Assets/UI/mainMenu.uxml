@@ -1,8 +1,8 @@
 <engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/UI/yellowBackground.uss?fileID=7433441132597879392&amp;guid=615c44c8db1b7154db26e5d6e3e6171c&amp;type=3#yellowBackground" />
-    <engine:VisualElement class="yellowBackground" style="left: 3px;">
+    <engine:VisualElement class="yellowBackground" style="left: 3px; height: 660px;">
         <engine:Label text="Welcome!" style="-unity-text-align: upper-center; -unity-font-style: bold; font-size: 18px; top: 10%;" />
-        <engine:Label text="Choose a Scene: " enable-rich-text="true" style="top: 70px; -unity-text-align: upper-center; font-size: 16px;" />
+        <engine:Label text="Choose a Scene: " enable-rich-text="true" style="top: 10%; -unity-text-align: upper-center; font-size: 16px;" />
         <engine:Button text="Tutorial" name="buttonTutorial" class="blueButton" />
         <engine:Button text="Game 1" name="buttonGame1" class="blueButton" style="top: 20%; -unity-font-style: bold;" />
         <engine:Button text="Game 2" name="buttonGame2" class="blueButton" style="top: 25%; -unity-font-style: bold;" />
@@ -10,14 +10,14 @@
         <engine:Label text="Presets Selected:" style="-unity-font-style: bold-and-italic; font-size: 18px; -unity-text-align: upper-center; white-space: nowrap; align-items: center; align-self: flex-start; align-content: auto; left: 3%; top: 35%;" />
         <engine:Label text="Haptic Collider Preset:  " name="labelColliderSelected" style="-unity-text-align: upper-center; align-self: flex-start; left: 3%; top: 35%; -unity-font-style: bold;" />
         <engine:Label text="Haptic Material Preset:  " name="labelMaterialSelected" double-click-selects-word="true" style="-unity-text-align: upper-center; align-self: flex-start; left: 3%; top: 35%; -unity-font-style: bold;" />
-        <engine:Label text="Game 1: " style="left: 337px; top: 492px; -unity-text-align: upper-center; align-items: center; align-self: center; align-content: auto; position: absolute; font-size: 18px; -unity-font-style: bold-and-italic;" />
-        <engine:Label text="Time:" name="labelGame1Time" style="position: absolute; top: 527px; left: 337px; -unity-font-style: bold;" />
-        <engine:Label text="Game 2: " enable-rich-text="true" style="left: 506px; top: 490px; -unity-text-align: upper-center; align-items: center; align-self: center; align-content: auto; position: absolute; font-size: 18px; -unity-font-style: bold-and-italic;" />
-        <engine:Label text="Time:" name="labelGame2Time" style="position: absolute; top: 527px; left: 511px; -unity-font-style: bold;" />
-        <engine:Label text="Mistakes: " name="labelGame2Mistakes" style="position: absolute; top: 565px; left: 511px; -unity-font-style: bold;" />
-        <engine:Label text="Game 3: " enable-rich-text="true" style="left: 657px; top: 489px; -unity-text-align: upper-center; align-items: center; align-self: center; align-content: auto; position: absolute; font-size: 18px; -unity-font-style: bold-and-italic;" />
-        <engine:Label text="Time:" name="labelGame3Time" style="position: absolute; top: 526px; left: 659px; -unity-font-style: bold;" />
-        <engine:Label text="Percent on Path: " name="labelGame3Percent" style="position: absolute; top: 564px; left: 654px; -unity-font-style: bold;" />
-        <engine:Label text="Correct Order:" name="labelCorrectOrder" selectable="false" style="position: absolute; top: 611px; left: 299px; -unity-font-style: bold;" />
+        <engine:Label text="Game 1: " style="left: -18%; top: 25%; -unity-text-align: upper-center; align-items: center; align-self: center; align-content: auto; position: relative; font-size: 18px; -unity-font-style: bold-and-italic;" />
+        <engine:Label text="Time:" name="labelGame1Time" style="position: relative; top: 25%; left: -18%; -unity-font-style: bold; -unity-text-align: upper-center;" />
+        <engine:Label text="Game 2: " enable-rich-text="true" style="left: 0; top: 18.7%; -unity-text-align: upper-center; align-items: center; align-self: center; align-content: auto; position: relative; font-size: 18px; -unity-font-style: bold-and-italic;" />
+        <engine:Label text="Time:" name="labelGame2Time" style="position: relative; top: 18.7%; left: 0; -unity-font-style: bold; -unity-text-align: upper-center;" />
+        <engine:Label text="Mistakes: " name="labelGame2Mistakes" style="position: relative; top: 18.7%; left: 0; -unity-font-style: bold; -unity-text-align: upper-center;" />
+        <engine:Label text="Game 3: " enable-rich-text="true" style="left: 15%; top: 9.6%; -unity-text-align: upper-center; align-items: center; align-self: center; align-content: auto; position: relative; font-size: 18px; -unity-font-style: bold-and-italic;" />
+        <engine:Label text="Time:" name="labelGame3Time" style="position: relative; top: 9.6%; left: 15%; -unity-font-style: bold; -unity-text-align: upper-center;" />
+        <engine:Label text="Percent on Path: " name="labelGame3Percent" style="position: relative; top: 9.6%; left: 15%; -unity-font-style: bold; -unity-text-align: upper-center;" />
+        <engine:Label text="Correct Order:" name="labelCorrectOrder" selectable="false" style="position: relative; top: 15%; left: -18%; -unity-font-style: bold; -unity-text-align: upper-center;" />
     </engine:VisualElement>
 </engine:UXML>

@@ -102,17 +102,17 @@ public class StylusSettings : MonoBehaviour
          mainMenuScript.Instance.setColliderPreset();                //UPDATE MAIN MENU LABEL
 
             switch(presetNumber){
-                case 0:                                         //mikro collider
-                  hapticCollider.transform.localScale=new Vector3(0.01f,0.01f,0.01f);
+                case 0:                                                                  //mikro collider
+                        hapticCollider.transform.localScale=new Vector3(0.01f,0.01f,0.01f);
                 break;
 
-                case 1:                             //mesaio collider
+                case 1:                                                                   //mesaio collider
                        
                        hapticCollider.transform.localScale=new Vector3(0.025f,0.025f,0.025f);
                 break;
                 
-                case 2:                 //megalo collider
-            hapticCollider.transform.localScale=new Vector3(0.04f,0.04f,0.04f);
+                case 2:                                                                    //megalo collider
+                        hapticCollider.transform.localScale=new Vector3(0.04f,0.04f,0.04f);
                 break;
 
             }

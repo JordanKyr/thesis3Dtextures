@@ -232,7 +232,7 @@ public class FirstPersonController : MonoBehaviour
     
         
         Vector3 direction = (targetPos - transform.position).normalized;
-         RaycastHit hit;
+        RaycastHit hit;
         
         Debug.DrawRay(transform.position, direction * tileSize, Color.red, 10f);
        if (Physics.Raycast(transform.position, (targetPos - transform.position).normalized, out hit, tileSize, limitLayer))
@@ -310,6 +310,8 @@ public class FirstPersonController : MonoBehaviour
         fpc.playerCamera = (Camera)EditorGUILayout.ObjectField(new GUIContent("Camera", "Camera attached to the controller."), fpc.playerCamera, typeof(Camera), true);
         fpc.fov = EditorGUILayout.Slider(new GUIContent("Field of View", "The camera’s view angle. Changes the player camera directly."), fpc.fov, 10f, 179f);
         
+
+
         /*
         fpc.cameraCanMove = EditorGUILayout.ToggleLeft(new GUIContent("Enable Camera Rotation", "Determines if the camera is allowed to move."), fpc.cameraCanMove);
 
@@ -335,8 +337,11 @@ public class FirstPersonController : MonoBehaviour
 
         GUI.enabled = fpc.playerCanMove;
         fpc.walkSpeed = EditorGUILayout.Slider(new GUIContent("Walk Speed", "Determines how fast the player will move while walking."), fpc.walkSpeed, .1f, 20.0f);
-        GUI.enabled = true;
+        
 
+
+        GUI.enabled = true;
+        fpc.limitLayer=EditorGUILayout.MaskField(new GUIContent("Limit Layer", "Collider layer of the walls"), fpc.limitLayer,UnityEditorInternal.InternalEditorUtility.layers);   //input gia layermask
         EditorGUILayout.Space();
 
         #endregion
@@ -350,7 +355,6 @@ public class FirstPersonController : MonoBehaviour
         EditorGUILayout.Space();
         
         fpc.Player = (GameObject)EditorGUILayout.ObjectField(new GUIContent("Player", "Player to Turn."), fpc.Player, typeof(GameObject), true);
-        fpc.limitLayer=EditorGUILayout.MaskField(new GUIContent("Limit Layer", "Collider layer of the walls"), fpc.limitLayer,UnityEditorInternal.InternalEditorUtility.layers);   //input gia layermask
 
 
         GUI.enabled = true;

@@ -138,7 +138,7 @@ public class SceneControl : MonoBehaviour
         
         
                 
-                Material mat1 = Resources.Load<Material>("Models/Materials/MaterialStage1");
+                Material mat1 = Resources.Load<Material>("Models/Materials/SecondMatBlue");
                 StageBorders[aStage].gameObject.GetComponent<MeshRenderer>().material = mat1;
 
                 if (aStage > 0)
